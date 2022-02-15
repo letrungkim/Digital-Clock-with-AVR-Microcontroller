@@ -1,0 +1,905 @@
+
+Assignment_Ver1.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         0000000a  00800100  00000564  000005f8  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00000564  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000014  0080010a  0080010a  00000602  2**0
+                  ALLOC
+  3 .debug_aranges 00000028  00000000  00000000  00000602  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_pubnames 000000c6  00000000  00000000  0000062a  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   000004d8  00000000  00000000  000006f0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 0000014c  00000000  00000000  00000bc8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   000004ec  00000000  00000000  00000d14  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  00000030  00000000  00000000  00001200  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    000001ce  00000000  00000000  00001230  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    00000370  00000000  00000000  000013fe  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000080  00000000  00000000  0000176e  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 34 00 	jmp	0x68	; 0x68 <__ctors_end>
+   4:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+   8:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+   c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  10:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  14:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  18:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  1c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  20:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  24:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  28:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  2c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  30:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  34:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  38:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  3c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  40:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  44:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  48:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  4c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  50:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  54:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  58:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  5c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  60:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  64:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+
+00000068 <__ctors_end>:
+  68:	11 24       	eor	r1, r1
+  6a:	1f be       	out	0x3f, r1	; 63
+  6c:	cf ef       	ldi	r28, 0xFF	; 255
+  6e:	d8 e0       	ldi	r29, 0x08	; 8
+  70:	de bf       	out	0x3e, r29	; 62
+  72:	cd bf       	out	0x3d, r28	; 61
+
+00000074 <__do_copy_data>:
+  74:	11 e0       	ldi	r17, 0x01	; 1
+  76:	a0 e0       	ldi	r26, 0x00	; 0
+  78:	b1 e0       	ldi	r27, 0x01	; 1
+  7a:	e4 e6       	ldi	r30, 0x64	; 100
+  7c:	f5 e0       	ldi	r31, 0x05	; 5
+  7e:	02 c0       	rjmp	.+4      	; 0x84 <.do_copy_data_start>
+
+00000080 <.do_copy_data_loop>:
+  80:	05 90       	lpm	r0, Z+
+  82:	0d 92       	st	X+, r0
+
+00000084 <.do_copy_data_start>:
+  84:	aa 30       	cpi	r26, 0x0A	; 10
+  86:	b1 07       	cpc	r27, r17
+  88:	d9 f7       	brne	.-10     	; 0x80 <.do_copy_data_loop>
+
+0000008a <__do_clear_bss>:
+  8a:	11 e0       	ldi	r17, 0x01	; 1
+  8c:	aa e0       	ldi	r26, 0x0A	; 10
+  8e:	b1 e0       	ldi	r27, 0x01	; 1
+  90:	01 c0       	rjmp	.+2      	; 0x94 <.do_clear_bss_start>
+
+00000092 <.do_clear_bss_loop>:
+  92:	1d 92       	st	X+, r1
+
+00000094 <.do_clear_bss_start>:
+  94:	ae 31       	cpi	r26, 0x1E	; 30
+  96:	b1 07       	cpc	r27, r17
+  98:	e1 f7       	brne	.-8      	; 0x92 <.do_clear_bss_loop>
+  9a:	0e 94 5a 00 	call	0xb4	; 0xb4 <main>
+  9e:	0c 94 b0 02 	jmp	0x560	; 0x560 <_exit>
+
+000000a2 <__bad_interrupt>:
+  a2:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000000a6 <_Z14Button_SetTimev>:
+enum time_state {HOUR, MINUTE};
+enum clock_state state;
+enum time_state time;
+
+void Button_SetTime(){
+	TCCR1B |= (1 << CS12 ); // Set the prescaler of 256
+  a6:	e1 e8       	ldi	r30, 0x81	; 129
+  a8:	f0 e0       	ldi	r31, 0x00	; 0
+  aa:	80 81       	ld	r24, Z
+  ac:	84 60       	ori	r24, 0x04	; 4
+  ae:	80 83       	st	Z, r24
+	TCNT0 = 0x00;			// Initial timer counter 0 
+  b0:	16 bc       	out	0x26, r1	; 38
+}
+  b2:	08 95       	ret
+
+000000b4 <main>:
+
+int main (void){
+  b4:	2f 92       	push	r2
+  b6:	3f 92       	push	r3
+  b8:	4f 92       	push	r4
+  ba:	5f 92       	push	r5
+  bc:	6f 92       	push	r6
+  be:	7f 92       	push	r7
+  c0:	8f 92       	push	r8
+  c2:	9f 92       	push	r9
+  c4:	af 92       	push	r10
+  c6:	bf 92       	push	r11
+  c8:	cf 92       	push	r12
+  ca:	df 92       	push	r13
+  cc:	ef 92       	push	r14
+  ce:	ff 92       	push	r15
+  d0:	0f 93       	push	r16
+  d2:	1f 93       	push	r17
+  d4:	cf 93       	push	r28
+  d6:	df 93       	push	r29
+	
+	// Set up Output port D, B, and C to control the 4-digit 7-segment LEDs
+	DDRD = 0xF7;
+  d8:	87 ef       	ldi	r24, 0xF7	; 247
+  da:	8a b9       	out	0x0a, r24	; 10
+	DDRC = 0x3F;
+  dc:	8f e3       	ldi	r24, 0x3F	; 63
+  de:	87 b9       	out	0x07, r24	; 7
+	DDRB |= (1<<PORTB4);
+  e0:	e4 e2       	ldi	r30, 0x24	; 36
+  e2:	f0 e0       	ldi	r31, 0x00	; 0
+  e4:	80 81       	ld	r24, Z
+  e6:	80 61       	ori	r24, 0x10	; 16
+  e8:	80 83       	st	Z, r24
+	
+	DDRB &= ~(1<<PORTB0)|(1<<PORTB1)|(1<<PORTB5)|(1<<PORTB3); // Input signal from button to change time in Set mode
+  ea:	80 81       	ld	r24, Z
+  ec:	8e 7f       	andi	r24, 0xFE	; 254
+  ee:	80 83       	st	Z, r24
+
+	// Set up Timer prescaler 256
+	Button_SetTime();
+  f0:	0e 94 53 00 	call	0xa6	; 0xa6 <_Z14Button_SetTimev>
+	
+	// Initial state is set mode
+	state = SET_MODE;
+  f4:	81 e0       	ldi	r24, 0x01	; 1
+  f6:	80 93 1c 01 	sts	0x011C, r24
+	// Initial state in set mode is set minute
+	time = MINUTE;
+  fa:	80 93 1d 01 	sts	0x011D, r24
+	while(1)
+	{
+		// Check button PINB5 state low to change the state of FSM 
+		if(!(PINB & (1<<PINB5)) && state == SET_MODE){
+  fe:	03 e2       	ldi	r16, 0x23	; 35
+ 100:	10 e0       	ldi	r17, 0x00	; 0
+			
+			// Set mode
+			case SET_MODE:
+			
+			// Buzzer/LED always off in this mode
+			PORTB &= ~(1<<PORTB4);
+ 102:	0f 2e       	mov	r0, r31
+ 104:	f5 e2       	ldi	r31, 0x25	; 37
+ 106:	6f 2e       	mov	r6, r31
+ 108:	77 24       	eor	r7, r7
+ 10a:	f0 2d       	mov	r31, r0
+					if(j > 23){
+						j = 0;
+					}
+				}
+				// Check PINB0 state low for decrement
+				else if (!(PINB & (1<<PINB0)))
+ 10c:	0f 2e       	mov	r0, r31
+ 10e:	f0 ed       	ldi	r31, 0xD0	; 208
+ 110:	4f 2e       	mov	r4, r31
+ 112:	f7 e0       	ldi	r31, 0x07	; 7
+ 114:	5f 2e       	mov	r5, r31
+ 116:	f0 2d       	mov	r31, r0
+	__asm__ volatile (
+		"1: sbiw %0,1" "\n\t"
+		"brne 1b"
+		: "=w" (__count)
+		: "0" (__count)
+	);
+ 118:	c0 e9       	ldi	r28, 0x90	; 144
+ 11a:	d1 e0       	ldi	r29, 0x01	; 1
+				{
+					_delay_ms(200);
+					j--;
+					if(j < 0){
+						j = 23;
+ 11c:	0f 2e       	mov	r0, r31
+ 11e:	f7 e1       	ldi	r31, 0x17	; 23
+ 120:	2f 2e       	mov	r2, r31
+ 122:	33 24       	eor	r3, r3
+ 124:	f0 2d       	mov	r31, r0
+				_delay_ms(200);
+				time = HOUR;
+			}
+			else if(!(PINB & (1<<PINB3)) && time == HOUR){
+				_delay_ms(200);
+				time = MINUTE;
+ 126:	41 e0       	ldi	r20, 0x01	; 1
+		}
+		// 4-digit are connect from Digit 1 - 4 to port C Pin 3 - 0 respectively
+		// Hour is defined by j which increase every 60 counts in minute
+		cntHr = j;
+		cntHr10 = cntHr / 10;		// The tens are calculated by division of integer
+		PORTC = SegOne;
+ 128:	0f 2e       	mov	r0, r31
+ 12a:	f8 e2       	ldi	r31, 0x28	; 40
+ 12c:	ef 2e       	mov	r14, r31
+ 12e:	ff 24       	eor	r15, r15
+ 130:	f0 2d       	mov	r31, r0
+		PORTD = seg_code_d[cntHr10];
+ 132:	0f 2e       	mov	r0, r31
+ 134:	f0 e0       	ldi	r31, 0x00	; 0
+ 136:	cf 2e       	mov	r12, r31
+ 138:	f1 e0       	ldi	r31, 0x01	; 1
+ 13a:	df 2e       	mov	r13, r31
+ 13c:	f0 2d       	mov	r31, r0
+ 13e:	0f 2e       	mov	r0, r31
+ 140:	fb e2       	ldi	r31, 0x2B	; 43
+ 142:	af 2e       	mov	r10, r31
+ 144:	bb 24       	eor	r11, r11
+ 146:	f0 2d       	mov	r31, r0
+ 148:	0f 2e       	mov	r0, r31
+ 14a:	f0 ea       	ldi	r31, 0xA0	; 160
+ 14c:	8f 2e       	mov	r8, r31
+ 14e:	ff e0       	ldi	r31, 0x0F	; 15
+ 150:	9f 2e       	mov	r9, r31
+ 152:	f0 2d       	mov	r31, r0
+	// Initial state in set mode is set minute
+	time = MINUTE;
+	while(1)
+	{
+		// Check button PINB5 state low to change the state of FSM 
+		if(!(PINB & (1<<PINB5)) && state == SET_MODE){
+ 154:	f8 01       	movw	r30, r16
+ 156:	80 81       	ld	r24, Z
+ 158:	85 fd       	sbrc	r24, 5
+ 15a:	d1 c1       	rjmp	.+930    	; 0x4fe <main+0x44a>
+ 15c:	80 91 1c 01 	lds	r24, 0x011C
+ 160:	81 30       	cpi	r24, 0x01	; 1
+ 162:	09 f0       	breq	.+2      	; 0x166 <main+0xb2>
+ 164:	cc c1       	rjmp	.+920    	; 0x4fe <main+0x44a>
+ 166:	92 01       	movw	r18, r4
+ 168:	ce 01       	movw	r24, r28
+ 16a:	01 97       	sbiw	r24, 0x01	; 1
+ 16c:	f1 f7       	brne	.-4      	; 0x16a <main+0xb6>
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ 16e:	21 50       	subi	r18, 0x01	; 1
+ 170:	30 40       	sbci	r19, 0x00	; 0
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ 172:	d1 f7       	brne	.-12     	; 0x168 <main+0xb4>
+			_delay_ms(200);		// delay 200 ms for debounce
+			state = TIME_MODE;
+ 174:	10 92 1c 01 	sts	0x011C, r1
+ 178:	3b c0       	rjmp	.+118    	; 0x1f0 <main+0x13c>
+		}
+		else if(!(PINB & (1<<PINB5)) && state == TIME_MODE){
+ 17a:	80 91 1c 01 	lds	r24, 0x011C
+ 17e:	88 23       	and	r24, r24
+ 180:	59 f4       	brne	.+22     	; 0x198 <main+0xe4>
+ 182:	92 01       	movw	r18, r4
+ 184:	ce 01       	movw	r24, r28
+ 186:	01 97       	sbiw	r24, 0x01	; 1
+ 188:	f1 f7       	brne	.-4      	; 0x186 <main+0xd2>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ 18a:	21 50       	subi	r18, 0x01	; 1
+ 18c:	30 40       	sbci	r19, 0x00	; 0
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ 18e:	d1 f7       	brne	.-12     	; 0x184 <main+0xd0>
+			_delay_ms(200);
+			state = SET_MODE;
+ 190:	40 93 1c 01 	sts	0x011C, r20
+			time = MINUTE;
+ 194:	40 93 1d 01 	sts	0x011D, r20
+		}
+		// If state is Set mode, check button PINB3 state low to switch between Hour and Minute
+		if(state == SET_MODE){
+ 198:	80 91 1c 01 	lds	r24, 0x011C
+ 19c:	81 30       	cpi	r24, 0x01	; 1
+ 19e:	01 f5       	brne	.+64     	; 0x1e0 <main+0x12c>
+			if(!(PINB & (1<<PINB3)) && time == MINUTE){
+ 1a0:	f8 01       	movw	r30, r16
+ 1a2:	80 81       	ld	r24, Z
+ 1a4:	83 fd       	sbrc	r24, 3
+ 1a6:	b0 c1       	rjmp	.+864    	; 0x508 <main+0x454>
+ 1a8:	80 91 1d 01 	lds	r24, 0x011D
+ 1ac:	81 30       	cpi	r24, 0x01	; 1
+ 1ae:	09 f0       	breq	.+2      	; 0x1b2 <main+0xfe>
+ 1b0:	ab c1       	rjmp	.+854    	; 0x508 <main+0x454>
+ 1b2:	92 01       	movw	r18, r4
+ 1b4:	ce 01       	movw	r24, r28
+ 1b6:	01 97       	sbiw	r24, 0x01	; 1
+ 1b8:	f1 f7       	brne	.-4      	; 0x1b6 <main+0x102>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ 1ba:	21 50       	subi	r18, 0x01	; 1
+ 1bc:	30 40       	sbci	r19, 0x00	; 0
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ 1be:	d1 f7       	brne	.-12     	; 0x1b4 <main+0x100>
+				_delay_ms(200);
+				time = HOUR;
+ 1c0:	10 92 1d 01 	sts	0x011D, r1
+ 1c4:	0d c0       	rjmp	.+26     	; 0x1e0 <main+0x12c>
+			}
+			else if(!(PINB & (1<<PINB3)) && time == HOUR){
+ 1c6:	80 91 1d 01 	lds	r24, 0x011D
+ 1ca:	88 23       	and	r24, r24
+ 1cc:	49 f4       	brne	.+18     	; 0x1e0 <main+0x12c>
+ 1ce:	92 01       	movw	r18, r4
+ 1d0:	ce 01       	movw	r24, r28
+ 1d2:	01 97       	sbiw	r24, 0x01	; 1
+ 1d4:	f1 f7       	brne	.-4      	; 0x1d2 <main+0x11e>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ 1d6:	21 50       	subi	r18, 0x01	; 1
+ 1d8:	30 40       	sbci	r19, 0x00	; 0
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ 1da:	d1 f7       	brne	.-12     	; 0x1d0 <main+0x11c>
+				_delay_ms(200);
+				time = MINUTE;
+ 1dc:	40 93 1d 01 	sts	0x011D, r20
+			}
+		}
+		switch(state)
+ 1e0:	80 91 1c 01 	lds	r24, 0x011C
+ 1e4:	88 23       	and	r24, r24
+ 1e6:	21 f0       	breq	.+8      	; 0x1f0 <main+0x13c>
+ 1e8:	81 30       	cpi	r24, 0x01	; 1
+ 1ea:	09 f0       	breq	.+2      	; 0x1ee <main+0x13a>
+ 1ec:	00 c1       	rjmp	.+512    	; 0x3ee <main+0x33a>
+ 1ee:	74 c0       	rjmp	.+232    	; 0x2d8 <main+0x224>
+		{
+			// Time mode
+			case TIME_MODE:
+			// Timer counter frequency 0.5Hz
+			if (TCNT1 >= 62499)
+ 1f0:	e4 e8       	ldi	r30, 0x84	; 132
+ 1f2:	f0 e0       	ldi	r31, 0x00	; 0
+ 1f4:	80 81       	ld	r24, Z
+ 1f6:	91 81       	ldd	r25, Z+1	; 0x01
+ 1f8:	83 52       	subi	r24, 0x23	; 35
+ 1fa:	94 4f       	sbci	r25, 0xF4	; 244
+ 1fc:	b0 f0       	brcs	.+44     	; 0x22a <main+0x176>
+			{
+				counting++;
+ 1fe:	80 91 0e 01 	lds	r24, 0x010E
+ 202:	90 91 0f 01 	lds	r25, 0x010F
+ 206:	01 96       	adiw	r24, 0x01	; 1
+ 208:	90 93 0f 01 	sts	0x010F, r25
+ 20c:	80 93 0e 01 	sts	0x010E, r24
+				countAlarm++;
+ 210:	80 91 12 01 	lds	r24, 0x0112
+ 214:	90 91 13 01 	lds	r25, 0x0113
+ 218:	01 96       	adiw	r24, 0x01	; 1
+ 21a:	90 93 13 01 	sts	0x0113, r25
+ 21e:	80 93 12 01 	sts	0x0112, r24
+				TCNT1 = 0;
+ 222:	e4 e8       	ldi	r30, 0x84	; 132
+ 224:	f0 e0       	ldi	r31, 0x00	; 0
+ 226:	11 82       	std	Z+1, r1	; 0x01
+ 228:	10 82       	st	Z, r1
+			}
+			// Every 60s, The minute is increased by 1 and second reset to 0
+			if (counting > 59)
+ 22a:	80 91 0e 01 	lds	r24, 0x010E
+ 22e:	90 91 0f 01 	lds	r25, 0x010F
+ 232:	cc 97       	sbiw	r24, 0x3c	; 60
+ 234:	d4 f0       	brlt	.+52     	; 0x26a <main+0x1b6>
+			{
+				countAlarm = 0;
+ 236:	10 92 13 01 	sts	0x0113, r1
+ 23a:	10 92 12 01 	sts	0x0112, r1
+				counting = 0;
+ 23e:	10 92 0f 01 	sts	0x010F, r1
+ 242:	10 92 0e 01 	sts	0x010E, r1
+				count++;
+ 246:	80 91 10 01 	lds	r24, 0x0110
+ 24a:	90 91 11 01 	lds	r25, 0x0111
+ 24e:	01 96       	adiw	r24, 0x01	; 1
+ 250:	90 93 11 01 	sts	0x0111, r25
+ 254:	80 93 10 01 	sts	0x0110, r24
+				i++;
+ 258:	80 91 0a 01 	lds	r24, 0x010A
+ 25c:	90 91 0b 01 	lds	r25, 0x010B
+ 260:	01 96       	adiw	r24, 0x01	; 1
+ 262:	90 93 0b 01 	sts	0x010B, r25
+ 266:	80 93 0a 01 	sts	0x010A, r24
+			}
+			// Every 60 min, the hour is increased by 1 and minute reset to 0
+			if (i > 59)
+ 26a:	80 91 0a 01 	lds	r24, 0x010A
+ 26e:	90 91 0b 01 	lds	r25, 0x010B
+ 272:	cc 97       	sbiw	r24, 0x3c	; 60
+ 274:	6c f0       	brlt	.+26     	; 0x290 <main+0x1dc>
+			{
+				i = 0;
+ 276:	10 92 0b 01 	sts	0x010B, r1
+ 27a:	10 92 0a 01 	sts	0x010A, r1
+				j++;
+ 27e:	80 91 0c 01 	lds	r24, 0x010C
+ 282:	90 91 0d 01 	lds	r25, 0x010D
+ 286:	01 96       	adiw	r24, 0x01	; 1
+ 288:	90 93 0d 01 	sts	0x010D, r25
+ 28c:	80 93 0c 01 	sts	0x010C, r24
+			}
+			// Every 24 hour, the hour is reset to 0
+			if (j > 23)
+ 290:	80 91 0c 01 	lds	r24, 0x010C
+ 294:	90 91 0d 01 	lds	r25, 0x010D
+ 298:	48 97       	sbiw	r24, 0x18	; 24
+ 29a:	24 f0       	brlt	.+8      	; 0x2a4 <main+0x1f0>
+			{
+				j = 0;
+ 29c:	10 92 0d 01 	sts	0x010D, r1
+ 2a0:	10 92 0c 01 	sts	0x010C, r1
+			}
+			// Buzzer(alarm)/ LED turn on every 2 min
+			if(count == 2){
+ 2a4:	80 91 10 01 	lds	r24, 0x0110
+ 2a8:	90 91 11 01 	lds	r25, 0x0111
+ 2ac:	02 97       	sbiw	r24, 0x02	; 2
+ 2ae:	41 f4       	brne	.+16     	; 0x2c0 <main+0x20c>
+				PORTB |= (1<<PORTB4);
+ 2b0:	f3 01       	movw	r30, r6
+ 2b2:	80 81       	ld	r24, Z
+ 2b4:	80 61       	ori	r24, 0x10	; 16
+ 2b6:	80 83       	st	Z, r24
+				count = 0;
+ 2b8:	10 92 11 01 	sts	0x0111, r1
+ 2bc:	10 92 10 01 	sts	0x0110, r1
+			} 
+			// Buzzer(alarm)/ LED turns off after 5s
+			if (countAlarm == 5)
+ 2c0:	80 91 12 01 	lds	r24, 0x0112
+ 2c4:	90 91 13 01 	lds	r25, 0x0113
+ 2c8:	05 97       	sbiw	r24, 0x05	; 5
+ 2ca:	09 f0       	breq	.+2      	; 0x2ce <main+0x21a>
+ 2cc:	90 c0       	rjmp	.+288    	; 0x3ee <main+0x33a>
+			{
+				PORTB &= ~(1<<PORTB4);
+ 2ce:	f3 01       	movw	r30, r6
+ 2d0:	80 81       	ld	r24, Z
+ 2d2:	8f 7e       	andi	r24, 0xEF	; 239
+ 2d4:	80 83       	st	Z, r24
+ 2d6:	8b c0       	rjmp	.+278    	; 0x3ee <main+0x33a>
+			
+			// Set mode
+			case SET_MODE:
+			
+			// Buzzer/LED always off in this mode
+			PORTB &= ~(1<<PORTB4);
+ 2d8:	f3 01       	movw	r30, r6
+ 2da:	80 81       	ld	r24, Z
+ 2dc:	8f 7e       	andi	r24, 0xEF	; 239
+ 2de:	80 83       	st	Z, r24
+			
+			// FSM to change the hour and minute increment and decrement
+			switch(time)
+ 2e0:	80 91 1d 01 	lds	r24, 0x011D
+ 2e4:	88 23       	and	r24, r24
+ 2e6:	21 f0       	breq	.+8      	; 0x2f0 <main+0x23c>
+ 2e8:	81 30       	cpi	r24, 0x01	; 1
+ 2ea:	09 f0       	breq	.+2      	; 0x2ee <main+0x23a>
+ 2ec:	80 c0       	rjmp	.+256    	; 0x3ee <main+0x33a>
+ 2ee:	40 c0       	rjmp	.+128    	; 0x370 <main+0x2bc>
+			{
+				// State Set hour
+				case HOUR:
+				// Check PINB1 state low for increment
+				if (!(PINB & (1<<PINB1)))
+ 2f0:	f8 01       	movw	r30, r16
+ 2f2:	80 81       	ld	r24, Z
+ 2f4:	81 fd       	sbrc	r24, 1
+ 2f6:	1c c0       	rjmp	.+56     	; 0x330 <main+0x27c>
+ 2f8:	92 01       	movw	r18, r4
+ 2fa:	ce 01       	movw	r24, r28
+ 2fc:	01 97       	sbiw	r24, 0x01	; 1
+ 2fe:	f1 f7       	brne	.-4      	; 0x2fc <main+0x248>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ 300:	21 50       	subi	r18, 0x01	; 1
+ 302:	30 40       	sbci	r19, 0x00	; 0
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ 304:	d1 f7       	brne	.-12     	; 0x2fa <main+0x246>
+				{
+					_delay_ms(200);
+					j++;
+ 306:	80 91 0c 01 	lds	r24, 0x010C
+ 30a:	90 91 0d 01 	lds	r25, 0x010D
+ 30e:	01 96       	adiw	r24, 0x01	; 1
+ 310:	90 93 0d 01 	sts	0x010D, r25
+ 314:	80 93 0c 01 	sts	0x010C, r24
+					if(j > 23){
+ 318:	80 91 0c 01 	lds	r24, 0x010C
+ 31c:	90 91 0d 01 	lds	r25, 0x010D
+ 320:	48 97       	sbiw	r24, 0x18	; 24
+ 322:	0c f4       	brge	.+2      	; 0x326 <main+0x272>
+ 324:	64 c0       	rjmp	.+200    	; 0x3ee <main+0x33a>
+						j = 0;
+ 326:	10 92 0d 01 	sts	0x010D, r1
+ 32a:	10 92 0c 01 	sts	0x010C, r1
+ 32e:	5f c0       	rjmp	.+190    	; 0x3ee <main+0x33a>
+					}
+				}
+				// Check PINB0 state low for decrement
+				else if (!(PINB & (1<<PINB0)))
+ 330:	f8 01       	movw	r30, r16
+ 332:	80 81       	ld	r24, Z
+ 334:	80 fd       	sbrc	r24, 0
+ 336:	5b c0       	rjmp	.+182    	; 0x3ee <main+0x33a>
+ 338:	92 01       	movw	r18, r4
+ 33a:	ce 01       	movw	r24, r28
+ 33c:	01 97       	sbiw	r24, 0x01	; 1
+ 33e:	f1 f7       	brne	.-4      	; 0x33c <main+0x288>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ 340:	21 50       	subi	r18, 0x01	; 1
+ 342:	30 40       	sbci	r19, 0x00	; 0
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ 344:	d1 f7       	brne	.-12     	; 0x33a <main+0x286>
+				{
+					_delay_ms(200);
+					j--;
+ 346:	80 91 0c 01 	lds	r24, 0x010C
+ 34a:	90 91 0d 01 	lds	r25, 0x010D
+ 34e:	01 97       	sbiw	r24, 0x01	; 1
+ 350:	90 93 0d 01 	sts	0x010D, r25
+ 354:	80 93 0c 01 	sts	0x010C, r24
+					if(j < 0){
+ 358:	80 91 0c 01 	lds	r24, 0x010C
+ 35c:	90 91 0d 01 	lds	r25, 0x010D
+ 360:	99 23       	and	r25, r25
+ 362:	0c f0       	brlt	.+2      	; 0x366 <main+0x2b2>
+ 364:	44 c0       	rjmp	.+136    	; 0x3ee <main+0x33a>
+						j = 23;
+ 366:	30 92 0d 01 	sts	0x010D, r3
+ 36a:	20 92 0c 01 	sts	0x010C, r2
+ 36e:	3f c0       	rjmp	.+126    	; 0x3ee <main+0x33a>
+					}
+				}
+				break;
+				// State Set minute
+				case MINUTE:
+				if (!(PINB & (1<<PINB1)))
+ 370:	f8 01       	movw	r30, r16
+ 372:	80 81       	ld	r24, Z
+ 374:	81 fd       	sbrc	r24, 1
+ 376:	1b c0       	rjmp	.+54     	; 0x3ae <main+0x2fa>
+ 378:	92 01       	movw	r18, r4
+ 37a:	ce 01       	movw	r24, r28
+ 37c:	01 97       	sbiw	r24, 0x01	; 1
+ 37e:	f1 f7       	brne	.-4      	; 0x37c <main+0x2c8>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ 380:	21 50       	subi	r18, 0x01	; 1
+ 382:	30 40       	sbci	r19, 0x00	; 0
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ 384:	d1 f7       	brne	.-12     	; 0x37a <main+0x2c6>
+				{
+					_delay_ms(200);
+					i++;
+ 386:	80 91 0a 01 	lds	r24, 0x010A
+ 38a:	90 91 0b 01 	lds	r25, 0x010B
+ 38e:	01 96       	adiw	r24, 0x01	; 1
+ 390:	90 93 0b 01 	sts	0x010B, r25
+ 394:	80 93 0a 01 	sts	0x010A, r24
+					if(i > 59){
+ 398:	80 91 0a 01 	lds	r24, 0x010A
+ 39c:	90 91 0b 01 	lds	r25, 0x010B
+ 3a0:	cc 97       	sbiw	r24, 0x3c	; 60
+ 3a2:	2c f1       	brlt	.+74     	; 0x3ee <main+0x33a>
+						i = 0;
+ 3a4:	10 92 0b 01 	sts	0x010B, r1
+ 3a8:	10 92 0a 01 	sts	0x010A, r1
+ 3ac:	20 c0       	rjmp	.+64     	; 0x3ee <main+0x33a>
+					}
+				}
+				else if (!(PINB & (1<<PINB0)))
+ 3ae:	f8 01       	movw	r30, r16
+ 3b0:	80 81       	ld	r24, Z
+ 3b2:	80 fd       	sbrc	r24, 0
+ 3b4:	1c c0       	rjmp	.+56     	; 0x3ee <main+0x33a>
+ 3b6:	92 01       	movw	r18, r4
+ 3b8:	ce 01       	movw	r24, r28
+ 3ba:	01 97       	sbiw	r24, 0x01	; 1
+ 3bc:	f1 f7       	brne	.-4      	; 0x3ba <main+0x306>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ 3be:	21 50       	subi	r18, 0x01	; 1
+ 3c0:	30 40       	sbci	r19, 0x00	; 0
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ 3c2:	d1 f7       	brne	.-12     	; 0x3b8 <main+0x304>
+				{
+					_delay_ms(200);
+					i--;
+ 3c4:	80 91 0a 01 	lds	r24, 0x010A
+ 3c8:	90 91 0b 01 	lds	r25, 0x010B
+ 3cc:	01 97       	sbiw	r24, 0x01	; 1
+ 3ce:	90 93 0b 01 	sts	0x010B, r25
+ 3d2:	80 93 0a 01 	sts	0x010A, r24
+					if(i < 0){
+ 3d6:	80 91 0a 01 	lds	r24, 0x010A
+ 3da:	90 91 0b 01 	lds	r25, 0x010B
+ 3de:	99 23       	and	r25, r25
+ 3e0:	34 f4       	brge	.+12     	; 0x3ee <main+0x33a>
+						i = 59;
+ 3e2:	8b e3       	ldi	r24, 0x3B	; 59
+ 3e4:	90 e0       	ldi	r25, 0x00	; 0
+ 3e6:	90 93 0b 01 	sts	0x010B, r25
+ 3ea:	80 93 0a 01 	sts	0x010A, r24
+			}
+			break;	
+		}
+		// 4-digit are connect from Digit 1 - 4 to port C Pin 3 - 0 respectively
+		// Hour is defined by j which increase every 60 counts in minute
+		cntHr = j;
+ 3ee:	80 91 0c 01 	lds	r24, 0x010C
+ 3f2:	90 91 0d 01 	lds	r25, 0x010D
+ 3f6:	90 93 19 01 	sts	0x0119, r25
+ 3fa:	80 93 18 01 	sts	0x0118, r24
+		cntHr10 = cntHr / 10;		// The tens are calculated by division of integer
+ 3fe:	80 91 18 01 	lds	r24, 0x0118
+ 402:	90 91 19 01 	lds	r25, 0x0119
+ 406:	6a e0       	ldi	r22, 0x0A	; 10
+ 408:	70 e0       	ldi	r23, 0x00	; 0
+ 40a:	0e 94 89 02 	call	0x512	; 0x512 <__divmodhi4>
+ 40e:	86 2f       	mov	r24, r22
+ 410:	97 2f       	mov	r25, r23
+ 412:	90 93 1b 01 	sts	0x011B, r25
+ 416:	80 93 1a 01 	sts	0x011A, r24
+		PORTC = SegOne;
+ 41a:	f7 01       	movw	r30, r14
+ 41c:	40 83       	st	Z, r20
+		PORTD = seg_code_d[cntHr10];
+ 41e:	80 91 1a 01 	lds	r24, 0x011A
+ 422:	90 91 1b 01 	lds	r25, 0x011B
+ 426:	f6 01       	movw	r30, r12
+ 428:	e8 0f       	add	r30, r24
+ 42a:	f9 1f       	adc	r31, r25
+ 42c:	80 81       	ld	r24, Z
+ 42e:	f5 01       	movw	r30, r10
+ 430:	80 83       	st	Z, r24
+ 432:	c4 01       	movw	r24, r8
+ 434:	01 97       	sbiw	r24, 0x01	; 1
+ 436:	f1 f7       	brne	.-4      	; 0x434 <main+0x380>
+		_delay_ms(1);
+		
+		cntHr10 = cntHr % 10;		// The units are calculated by modulo
+ 438:	80 91 18 01 	lds	r24, 0x0118
+ 43c:	90 91 19 01 	lds	r25, 0x0119
+ 440:	6a e0       	ldi	r22, 0x0A	; 10
+ 442:	70 e0       	ldi	r23, 0x00	; 0
+ 444:	0e 94 89 02 	call	0x512	; 0x512 <__divmodhi4>
+ 448:	28 2f       	mov	r18, r24
+ 44a:	39 2f       	mov	r19, r25
+ 44c:	30 93 1b 01 	sts	0x011B, r19
+ 450:	20 93 1a 01 	sts	0x011A, r18
+		PORTC = SegTwo;
+ 454:	22 e0       	ldi	r18, 0x02	; 2
+ 456:	f7 01       	movw	r30, r14
+ 458:	20 83       	st	Z, r18
+		PORTD = seg_code_d[cntHr10];
+ 45a:	80 91 1a 01 	lds	r24, 0x011A
+ 45e:	90 91 1b 01 	lds	r25, 0x011B
+ 462:	f6 01       	movw	r30, r12
+ 464:	e8 0f       	add	r30, r24
+ 466:	f9 1f       	adc	r31, r25
+ 468:	80 81       	ld	r24, Z
+ 46a:	f5 01       	movw	r30, r10
+ 46c:	80 83       	st	Z, r24
+ 46e:	c4 01       	movw	r24, r8
+ 470:	01 97       	sbiw	r24, 0x01	; 1
+ 472:	f1 f7       	brne	.-4      	; 0x470 <main+0x3bc>
+		_delay_ms(1);
+		
+		// Minute is defined by i which increase every 60 counts in second
+		cntMin = i;
+ 474:	80 91 0a 01 	lds	r24, 0x010A
+ 478:	90 91 0b 01 	lds	r25, 0x010B
+ 47c:	90 93 15 01 	sts	0x0115, r25
+ 480:	80 93 14 01 	sts	0x0114, r24
+		cntMin10 = cntMin / 10;
+ 484:	80 91 14 01 	lds	r24, 0x0114
+ 488:	90 91 15 01 	lds	r25, 0x0115
+ 48c:	6a e0       	ldi	r22, 0x0A	; 10
+ 48e:	70 e0       	ldi	r23, 0x00	; 0
+ 490:	0e 94 89 02 	call	0x512	; 0x512 <__divmodhi4>
+ 494:	86 2f       	mov	r24, r22
+ 496:	97 2f       	mov	r25, r23
+ 498:	90 93 17 01 	sts	0x0117, r25
+ 49c:	80 93 16 01 	sts	0x0116, r24
+		PORTC = SegThree;
+ 4a0:	24 e0       	ldi	r18, 0x04	; 4
+ 4a2:	f7 01       	movw	r30, r14
+ 4a4:	20 83       	st	Z, r18
+		PORTD = seg_code_d[cntMin10];
+ 4a6:	80 91 16 01 	lds	r24, 0x0116
+ 4aa:	90 91 17 01 	lds	r25, 0x0117
+ 4ae:	f6 01       	movw	r30, r12
+ 4b0:	e8 0f       	add	r30, r24
+ 4b2:	f9 1f       	adc	r31, r25
+ 4b4:	80 81       	ld	r24, Z
+ 4b6:	f5 01       	movw	r30, r10
+ 4b8:	80 83       	st	Z, r24
+ 4ba:	c4 01       	movw	r24, r8
+ 4bc:	01 97       	sbiw	r24, 0x01	; 1
+ 4be:	f1 f7       	brne	.-4      	; 0x4bc <main+0x408>
+		_delay_ms(1);
+		
+		cntMin10 = cntMin % 10;
+ 4c0:	80 91 14 01 	lds	r24, 0x0114
+ 4c4:	90 91 15 01 	lds	r25, 0x0115
+ 4c8:	6a e0       	ldi	r22, 0x0A	; 10
+ 4ca:	70 e0       	ldi	r23, 0x00	; 0
+ 4cc:	0e 94 89 02 	call	0x512	; 0x512 <__divmodhi4>
+ 4d0:	28 2f       	mov	r18, r24
+ 4d2:	39 2f       	mov	r19, r25
+ 4d4:	30 93 17 01 	sts	0x0117, r19
+ 4d8:	20 93 16 01 	sts	0x0116, r18
+		PORTC = SegFour;
+ 4dc:	28 e0       	ldi	r18, 0x08	; 8
+ 4de:	f7 01       	movw	r30, r14
+ 4e0:	20 83       	st	Z, r18
+		PORTD = seg_code_d[cntMin10];
+ 4e2:	80 91 16 01 	lds	r24, 0x0116
+ 4e6:	90 91 17 01 	lds	r25, 0x0117
+ 4ea:	f6 01       	movw	r30, r12
+ 4ec:	e8 0f       	add	r30, r24
+ 4ee:	f9 1f       	adc	r31, r25
+ 4f0:	80 81       	ld	r24, Z
+ 4f2:	f5 01       	movw	r30, r10
+ 4f4:	80 83       	st	Z, r24
+ 4f6:	c4 01       	movw	r24, r8
+ 4f8:	01 97       	sbiw	r24, 0x01	; 1
+ 4fa:	f1 f7       	brne	.-4      	; 0x4f8 <main+0x444>
+ 4fc:	2b ce       	rjmp	.-938    	; 0x154 <main+0xa0>
+		// Check button PINB5 state low to change the state of FSM 
+		if(!(PINB & (1<<PINB5)) && state == SET_MODE){
+			_delay_ms(200);		// delay 200 ms for debounce
+			state = TIME_MODE;
+		}
+		else if(!(PINB & (1<<PINB5)) && state == TIME_MODE){
+ 4fe:	f8 01       	movw	r30, r16
+ 500:	80 81       	ld	r24, Z
+ 502:	85 fd       	sbrc	r24, 5
+ 504:	49 ce       	rjmp	.-878    	; 0x198 <main+0xe4>
+ 506:	39 ce       	rjmp	.-910    	; 0x17a <main+0xc6>
+		if(state == SET_MODE){
+			if(!(PINB & (1<<PINB3)) && time == MINUTE){
+				_delay_ms(200);
+				time = HOUR;
+			}
+			else if(!(PINB & (1<<PINB3)) && time == HOUR){
+ 508:	f8 01       	movw	r30, r16
+ 50a:	80 81       	ld	r24, Z
+ 50c:	83 fd       	sbrc	r24, 3
+ 50e:	68 ce       	rjmp	.-816    	; 0x1e0 <main+0x12c>
+ 510:	5a ce       	rjmp	.-844    	; 0x1c6 <main+0x112>
+
+00000512 <__divmodhi4>:
+ 512:	97 fb       	bst	r25, 7
+ 514:	09 2e       	mov	r0, r25
+ 516:	07 26       	eor	r0, r23
+ 518:	0a d0       	rcall	.+20     	; 0x52e <__divmodhi4_neg1>
+ 51a:	77 fd       	sbrc	r23, 7
+ 51c:	04 d0       	rcall	.+8      	; 0x526 <__divmodhi4_neg2>
+ 51e:	0c d0       	rcall	.+24     	; 0x538 <__udivmodhi4>
+ 520:	06 d0       	rcall	.+12     	; 0x52e <__divmodhi4_neg1>
+ 522:	00 20       	and	r0, r0
+ 524:	1a f4       	brpl	.+6      	; 0x52c <__divmodhi4_exit>
+
+00000526 <__divmodhi4_neg2>:
+ 526:	70 95       	com	r23
+ 528:	61 95       	neg	r22
+ 52a:	7f 4f       	sbci	r23, 0xFF	; 255
+
+0000052c <__divmodhi4_exit>:
+ 52c:	08 95       	ret
+
+0000052e <__divmodhi4_neg1>:
+ 52e:	f6 f7       	brtc	.-4      	; 0x52c <__divmodhi4_exit>
+ 530:	90 95       	com	r25
+ 532:	81 95       	neg	r24
+ 534:	9f 4f       	sbci	r25, 0xFF	; 255
+ 536:	08 95       	ret
+
+00000538 <__udivmodhi4>:
+ 538:	aa 1b       	sub	r26, r26
+ 53a:	bb 1b       	sub	r27, r27
+ 53c:	51 e1       	ldi	r21, 0x11	; 17
+ 53e:	07 c0       	rjmp	.+14     	; 0x54e <__udivmodhi4_ep>
+
+00000540 <__udivmodhi4_loop>:
+ 540:	aa 1f       	adc	r26, r26
+ 542:	bb 1f       	adc	r27, r27
+ 544:	a6 17       	cp	r26, r22
+ 546:	b7 07       	cpc	r27, r23
+ 548:	10 f0       	brcs	.+4      	; 0x54e <__udivmodhi4_ep>
+ 54a:	a6 1b       	sub	r26, r22
+ 54c:	b7 0b       	sbc	r27, r23
+
+0000054e <__udivmodhi4_ep>:
+ 54e:	88 1f       	adc	r24, r24
+ 550:	99 1f       	adc	r25, r25
+ 552:	5a 95       	dec	r21
+ 554:	a9 f7       	brne	.-22     	; 0x540 <__udivmodhi4_loop>
+ 556:	80 95       	com	r24
+ 558:	90 95       	com	r25
+ 55a:	bc 01       	movw	r22, r24
+ 55c:	cd 01       	movw	r24, r26
+ 55e:	08 95       	ret
+
+00000560 <_exit>:
+ 560:	f8 94       	cli
+
+00000562 <__stop_program>:
+ 562:	ff cf       	rjmp	.-2      	; 0x562 <__stop_program>

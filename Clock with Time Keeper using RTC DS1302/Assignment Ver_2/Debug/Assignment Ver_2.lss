@@ -1,0 +1,2033 @@
+
+Assignment Ver_2.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         0000002a  00800100  00000ae0  00000b74  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00000ae0  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000009  0080012a  0080012a  00000b9e  2**0
+                  ALLOC
+  3 .debug_aranges 000002f8  00000000  00000000  00000b9e  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_pubnames 000007d1  00000000  00000000  00000e96  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   000024f6  00000000  00000000  00001667  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 000007df  00000000  00000000  00003b5d  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   00001a03  00000000  00000000  0000433c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  00000570  00000000  00000000  00005d40  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    00000deb  00000000  00000000  000062b0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    00001615  00000000  00000000  0000709b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000368  00000000  00000000  000086b0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+	}
+	
+	return I2C_STATUS_SUCCESS;
+};
+
+uint8_t i2c_master_startWait(uint8_t address, uint8_t mode)
+   0:	0c 94 34 00 	jmp	0x68	; 0x68 <__ctors_end>
+#define DS1302_TCS3  DS1302_D7                                                                         
+                                                                                                         
+//  virtuabotixRTC Function                      
+//  This is the CONSTRUCTOR of the class.  It sets the pins assignments for the component, as well as    
+//  the Clock Enable and the trickle charge disablement.                                                
+virtuabotixRTC::virtuabotixRTC(uint8_t inSCLK, uint8_t inIO, uint8_t inC_E)   {                      
+   4:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+   8:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+   c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  10:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  14:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  18:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  1c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  20:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  24:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  28:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  2c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  30:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  34:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  38:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  3c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  40:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  44:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  48:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  4c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  50:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  54:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  58:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  5c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  60:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  64:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+
+00000068 <__ctors_end>:
+  68:	11 24       	eor	r1, r1
+  6a:	1f be       	out	0x3f, r1	; 63
+  6c:	cf ef       	ldi	r28, 0xFF	; 255
+  6e:	d8 e0       	ldi	r29, 0x08	; 8
+  70:	de bf       	out	0x3e, r29	; 62
+  72:	cd bf       	out	0x3d, r28	; 61
+
+00000074 <__do_copy_data>:
+  74:	11 e0       	ldi	r17, 0x01	; 1
+  76:	a0 e0       	ldi	r26, 0x00	; 0
+  78:	b1 e0       	ldi	r27, 0x01	; 1
+  7a:	e0 ee       	ldi	r30, 0xE0	; 224
+  7c:	fa e0       	ldi	r31, 0x0A	; 10
+  7e:	02 c0       	rjmp	.+4      	; 0x84 <.do_copy_data_start>
+
+00000080 <.do_copy_data_loop>:
+  80:	05 90       	lpm	r0, Z+
+  82:	0d 92       	st	X+, r0
+
+00000084 <.do_copy_data_start>:
+  84:	aa 32       	cpi	r26, 0x2A	; 42
+  86:	b1 07       	cpc	r27, r17
+  88:	d9 f7       	brne	.-10     	; 0x80 <.do_copy_data_loop>
+
+0000008a <__do_clear_bss>:
+  8a:	11 e0       	ldi	r17, 0x01	; 1
+  8c:	aa e2       	ldi	r26, 0x2A	; 42
+  8e:	b1 e0       	ldi	r27, 0x01	; 1
+  90:	01 c0       	rjmp	.+2      	; 0x94 <.do_clear_bss_start>
+
+00000092 <.do_clear_bss_loop>:
+  92:	1d 92       	st	X+, r1
+
+00000094 <.do_clear_bss_start>:
+  94:	a3 33       	cpi	r26, 0x33	; 51
+  96:	b1 07       	cpc	r27, r17
+  98:	e1 f7       	brne	.-8      	; 0x92 <.do_clear_bss_loop>
+  9a:	0e 94 f1 01 	call	0x3e2	; 0x3e2 <main>
+  9e:	0c 94 6e 05 	jmp	0xadc	; 0xadc <_exit>
+
+000000a2 <__bad_interrupt>:
+  a2:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000000a6 <_Z15i2c_master_initm>:
+#define I2C_SCL_FREQUENCY_PRESCALER 1
+#define I2C_TWBR_VALUE 
+
+#define I2C_PRESCALER_MASK 0xF8
+
+void i2c_master_init(unsigned long frequency)
+  a6:	9b 01       	movw	r18, r22
+  a8:	ac 01       	movw	r20, r24
+{
+	TWSR = 0;
+  aa:	10 92 b9 00 	sts	0x00B9, r1
+	TWBR = (uint8_t)((((F_CPU / frequency) / I2C_SCL_FREQUENCY_PRESCALER) - 16 ) / 2);
+  ae:	60 e4       	ldi	r22, 0x40	; 64
+  b0:	72 e4       	ldi	r23, 0x42	; 66
+  b2:	8f e0       	ldi	r24, 0x0F	; 15
+  b4:	90 e0       	ldi	r25, 0x00	; 0
+  b6:	0e 94 07 05 	call	0xa0e	; 0xa0e <__udivmodsi4>
+  ba:	20 51       	subi	r18, 0x10	; 16
+  bc:	30 40       	sbci	r19, 0x00	; 0
+  be:	40 40       	sbci	r20, 0x00	; 0
+  c0:	50 40       	sbci	r21, 0x00	; 0
+  c2:	56 95       	lsr	r21
+  c4:	47 95       	ror	r20
+  c6:	37 95       	ror	r19
+  c8:	27 95       	ror	r18
+  ca:	20 93 b8 00 	sts	0x00B8, r18
+}
+  ce:	08 95       	ret
+
+000000d0 <_Z16i2c_master_starthh>:
+
+uint8_t i2c_master_start(uint8_t address, uint8_t mode)
+  d0:	98 2f       	mov	r25, r24
+{
+	uint8_t   twst;
+
+	// reset control register
+	TWCR = 0;
+  d2:	ec eb       	ldi	r30, 0xBC	; 188
+  d4:	f0 e0       	ldi	r31, 0x00	; 0
+  d6:	10 82       	st	Z, r1
+
+	// transmit START condition
+	TWCR = (1<<TWINT) | (1<<TWSTA) | (1<<TWEN);
+  d8:	84 ea       	ldi	r24, 0xA4	; 164
+  da:	80 83       	st	Z, r24
+
+	// wait for end of transmission
+	while( !(TWCR & (1<<TWINT)) );
+  dc:	80 81       	ld	r24, Z
+  de:	88 23       	and	r24, r24
+  e0:	ec f7       	brge	.-6      	; 0xdc <_Z16i2c_master_starthh+0xc>
+	
+	// check if the start condition was successfully transmitted. Mask prescaler bits.
+	twst = TW_STATUS & I2C_PRESCALER_MASK;
+  e2:	80 91 b9 00 	lds	r24, 0x00B9
+  e6:	88 7f       	andi	r24, 0xF8	; 248
+	if ( (twst != TW_START) && (twst != TW_REP_START))
+  e8:	88 30       	cpi	r24, 0x08	; 8
+  ea:	21 f0       	breq	.+8      	; 0xf4 <_Z16i2c_master_starthh+0x24>
+  ec:	80 31       	cpi	r24, 0x10	; 16
+  ee:	11 f0       	breq	.+4      	; 0xf4 <_Z16i2c_master_starthh+0x24>
+  f0:	8a e0       	ldi	r24, 0x0A	; 10
+  f2:	08 95       	ret
+	{
+		return I2C_STATUS_ERROR_START_WAS_NOT_ACCEPTED;
+	}
+	
+	// load shifted slave address into data register with specified mode
+	TWDR = (address << 1) | mode;
+  f4:	89 2f       	mov	r24, r25
+  f6:	88 0f       	add	r24, r24
+  f8:	86 2b       	or	r24, r22
+  fa:	80 93 bb 00 	sts	0x00BB, r24
+
+	// start transmission of address
+	TWCR = (1<<TWINT) | (1<<TWEN);
+  fe:	84 e8       	ldi	r24, 0x84	; 132
+ 100:	80 93 bc 00 	sts	0x00BC, r24
+
+	// wait for end of transmission
+	while( !(TWCR & (1<<TWINT)) );
+ 104:	ec eb       	ldi	r30, 0xBC	; 188
+ 106:	f0 e0       	ldi	r31, 0x00	; 0
+ 108:	80 81       	ld	r24, Z
+ 10a:	88 23       	and	r24, r24
+ 10c:	ec f7       	brge	.-6      	; 0x108 <_Z16i2c_master_starthh+0x38>
+	
+	// check if the device has acknowledged the READ / WRITE mode
+	twst = TW_STATUS & I2C_PRESCALER_MASK;
+ 10e:	80 91 b9 00 	lds	r24, 0x00B9
+ 112:	88 7f       	andi	r24, 0xF8	; 248
+	if ( (twst != TW_MT_SLA_ACK) && (twst != TW_MR_SLA_ACK) )
+ 114:	88 31       	cpi	r24, 0x18	; 24
+ 116:	21 f0       	breq	.+8      	; 0x120 <_Z16i2c_master_starthh+0x50>
+ 118:	80 34       	cpi	r24, 0x40	; 64
+ 11a:	11 f0       	breq	.+4      	; 0x120 <_Z16i2c_master_starthh+0x50>
+ 11c:	84 e1       	ldi	r24, 0x14	; 20
+ 11e:	08 95       	ret
+ 120:	80 e0       	ldi	r24, 0x00	; 0
+	{
+		return I2C_STATUS_ERROR_TRANSMIT_OR_READ_WAS_NOT_ACKNOWLEDGED;
+	}
+	
+	return I2C_STATUS_SUCCESS;
+};
+ 122:	08 95       	ret
+
+00000124 <_Z16i2c_master_writeh>:
+uint8_t i2c_master_write(uint8_t data)
+{
+	uint8_t twst;
+
+	// put data into data register
+	TWDR = data;
+ 124:	80 93 bb 00 	sts	0x00BB, r24
+
+	// start transmission of data
+	TWCR = (1<<TWINT) | (1<<TWEN);
+ 128:	84 e8       	ldi	r24, 0x84	; 132
+ 12a:	80 93 bc 00 	sts	0x00BC, r24
+
+	// wait for end of transmission
+	while( !(TWCR & (1<<TWINT)) );
+ 12e:	ec eb       	ldi	r30, 0xBC	; 188
+ 130:	f0 e0       	ldi	r31, 0x00	; 0
+ 132:	80 81       	ld	r24, Z
+ 134:	88 23       	and	r24, r24
+ 136:	ec f7       	brge	.-6      	; 0x132 <_Z16i2c_master_writeh+0xe>
+	
+	// check value of TWI Status Register. Mask prescaler bits
+	twst = TW_STATUS & I2C_PRESCALER_MASK;
+ 138:	80 91 b9 00 	lds	r24, 0x00B9
+
+	// If Slave device not acknowledged transmission - returns an error
+	if( twst != TW_MT_DATA_ACK)
+ 13c:	88 7f       	andi	r24, 0xF8	; 248
+ 13e:	88 32       	cpi	r24, 0x28	; 40
+ 140:	11 f4       	brne	.+4      	; 0x146 <_Z16i2c_master_writeh+0x22>
+ 142:	80 e0       	ldi	r24, 0x00	; 0
+ 144:	08 95       	ret
+ 146:	85 e1       	ldi	r24, 0x15	; 21
+	{
+		return I2C_STATUS_ERROR_TRANSMIT_NOT_ACKNOWLEDGED;
+	}
+	
+	return I2C_STATUS_SUCCESS;
+}
+ 148:	08 95       	ret
+
+0000014a <_Z15i2c_master_stopv>:
+	return I2C_STATUS_SUCCESS;
+}
+
+void i2c_master_stop(void)
+{
+	TWCR = (1<<TWINT) | (1<<TWEN) | (1<<TWSTO);
+ 14a:	84 e9       	ldi	r24, 0x94	; 148
+ 14c:	80 93 bc 00 	sts	0x00BC, r24
+};
+ 150:	08 95       	ret
+
+00000152 <_Z19i2c_master_sendBytehh>:
+	i2c_master_stop();
+	
+	return I2C_STATUS_SUCCESS;
+}
+
+uint8_t i2c_master_sendByte(uint8_t address, uint8_t data)
+ 152:	0f 93       	push	r16
+ 154:	1f 93       	push	r17
+ 156:	06 2f       	mov	r16, r22
+{
+	uint8_t status = i2c_master_start(address, I2C_WRITE);
+ 158:	60 e0       	ldi	r22, 0x00	; 0
+ 15a:	0e 94 68 00 	call	0xd0	; 0xd0 <_Z16i2c_master_starthh>
+ 15e:	18 2f       	mov	r17, r24
+	if (status) return status;
+ 160:	88 23       	and	r24, r24
+ 162:	41 f4       	brne	.+16     	; 0x174 <_Z19i2c_master_sendBytehh+0x22>
+
+	status = i2c_master_write(data);
+ 164:	80 2f       	mov	r24, r16
+ 166:	0e 94 92 00 	call	0x124	; 0x124 <_Z16i2c_master_writeh>
+ 16a:	18 2f       	mov	r17, r24
+	if (status) return status;
+ 16c:	88 23       	and	r24, r24
+ 16e:	11 f4       	brne	.+4      	; 0x174 <_Z19i2c_master_sendBytehh+0x22>
+
+	i2c_master_stop();
+ 170:	0e 94 a5 00 	call	0x14a	; 0x14a <_Z15i2c_master_stopv>
+	
+	return I2C_STATUS_SUCCESS;
+};
+ 174:	81 2f       	mov	r24, r17
+ 176:	1f 91       	pop	r17
+ 178:	0f 91       	pop	r16
+ 17a:	08 95       	ret
+
+0000017c <_Z14lq_transmitI2CP21LiquidCrystalDevice_th>:
+
+	lq_transmitI2C(device, value & ~LCD_ENABLE_BIT);
+	_delay_us(50);
+};
+
+void lq_transmitI2C(LiquidCrystalDevice_t* device, uint8_t value)
+ 17c:	fc 01       	movw	r30, r24
+{
+	i2c_master_sendByte(device->Address, value | device->Backlight);
+ 17e:	83 81       	ldd	r24, Z+3	; 0x03
+ 180:	68 2b       	or	r22, r24
+ 182:	80 81       	ld	r24, Z
+ 184:	0e 94 a9 00 	call	0x152	; 0x152 <_Z19i2c_master_sendBytehh>
+ 188:	08 95       	ret
+
+0000018a <_Z19lq_writeDevicePulseP21LiquidCrystalDevice_th>:
+{
+	lq_transmitI2C(device, value);
+	lq_writeDevicePulse(device, value);
+};
+
+void lq_writeDevicePulse(LiquidCrystalDevice_t* device, uint8_t value)
+ 18a:	ff 92       	push	r15
+ 18c:	0f 93       	push	r16
+ 18e:	1f 93       	push	r17
+ 190:	8c 01       	movw	r16, r24
+ 192:	f6 2e       	mov	r15, r22
+{
+	lq_transmitI2C(device, value | LCD_ENABLE_BIT);
+ 194:	64 60       	ori	r22, 0x04	; 4
+ 196:	0e 94 be 00 	call	0x17c	; 0x17c <_Z14lq_transmitI2CP21LiquidCrystalDevice_th>
+	__asm__ volatile (
+		"1: dec %0" "\n\t"
+		"brne 1b"
+		: "=r" (__count)
+		: "0" (__count)
+	);
+ 19a:	81 e0       	ldi	r24, 0x01	; 1
+ 19c:	8a 95       	dec	r24
+ 19e:	f1 f7       	brne	.-4      	; 0x19c <_Z19lq_writeDevicePulseP21LiquidCrystalDevice_th+0x12>
+	_delay_us(2);
+
+	lq_transmitI2C(device, value & ~LCD_ENABLE_BIT);
+ 1a0:	8b ef       	ldi	r24, 0xFB	; 251
+ 1a2:	f8 22       	and	r15, r24
+ 1a4:	c8 01       	movw	r24, r16
+ 1a6:	6f 2d       	mov	r22, r15
+ 1a8:	0e 94 be 00 	call	0x17c	; 0x17c <_Z14lq_transmitI2CP21LiquidCrystalDevice_th>
+ 1ac:	80 e1       	ldi	r24, 0x10	; 16
+ 1ae:	8a 95       	dec	r24
+ 1b0:	f1 f7       	brne	.-4      	; 0x1ae <_Z19lq_writeDevicePulseP21LiquidCrystalDevice_th+0x24>
+	_delay_us(50);
+};
+ 1b2:	1f 91       	pop	r17
+ 1b4:	0f 91       	pop	r16
+ 1b6:	ff 90       	pop	r15
+ 1b8:	08 95       	ret
+
+000001ba <_Z19lq_writeDevice4BitsP21LiquidCrystalDevice_th>:
+
+	lq_writeDevice4Bits(device, highnib | mode);
+	lq_writeDevice4Bits(device, lownib | mode);
+};
+
+void lq_writeDevice4Bits(LiquidCrystalDevice_t* device, uint8_t value)
+ 1ba:	ff 92       	push	r15
+ 1bc:	0f 93       	push	r16
+ 1be:	1f 93       	push	r17
+ 1c0:	8c 01       	movw	r16, r24
+ 1c2:	f6 2e       	mov	r15, r22
+{
+	lq_transmitI2C(device, value);
+ 1c4:	0e 94 be 00 	call	0x17c	; 0x17c <_Z14lq_transmitI2CP21LiquidCrystalDevice_th>
+	lq_writeDevicePulse(device, value);
+ 1c8:	c8 01       	movw	r24, r16
+ 1ca:	6f 2d       	mov	r22, r15
+ 1cc:	0e 94 c5 00 	call	0x18a	; 0x18a <_Z19lq_writeDevicePulseP21LiquidCrystalDevice_th>
+};
+ 1d0:	1f 91       	pop	r17
+ 1d2:	0f 91       	pop	r16
+ 1d4:	ff 90       	pop	r15
+ 1d6:	08 95       	ret
+
+000001d8 <_Z18lq_writeDeviceByteP21LiquidCrystalDevice_thh>:
+void lq_sendCommand(LiquidCrystalDevice_t* device, uint8_t command)
+{
+	lq_writeDeviceByte(device, command, 0);
+}
+
+void lq_writeDeviceByte(LiquidCrystalDevice_t* device, uint8_t value, uint8_t mode)
+ 1d8:	ef 92       	push	r14
+ 1da:	ff 92       	push	r15
+ 1dc:	0f 93       	push	r16
+ 1de:	1f 93       	push	r17
+ 1e0:	7c 01       	movw	r14, r24
+ 1e2:	16 2f       	mov	r17, r22
+ 1e4:	04 2f       	mov	r16, r20
+{
+	uint8_t highnib= value & 0xf0;
+	uint8_t lownib= (value<<4) & 0xf0;
+
+	lq_writeDevice4Bits(device, highnib | mode);
+ 1e6:	86 2f       	mov	r24, r22
+ 1e8:	80 7f       	andi	r24, 0xF0	; 240
+ 1ea:	64 2f       	mov	r22, r20
+ 1ec:	68 2b       	or	r22, r24
+ 1ee:	c7 01       	movw	r24, r14
+ 1f0:	0e 94 dd 00 	call	0x1ba	; 0x1ba <_Z19lq_writeDevice4BitsP21LiquidCrystalDevice_th>
+	lq_writeDevice4Bits(device, lownib | mode);
+ 1f4:	12 95       	swap	r17
+ 1f6:	10 7f       	andi	r17, 0xF0	; 240
+ 1f8:	10 2b       	or	r17, r16
+ 1fa:	c7 01       	movw	r24, r14
+ 1fc:	61 2f       	mov	r22, r17
+ 1fe:	0e 94 dd 00 	call	0x1ba	; 0x1ba <_Z19lq_writeDevice4BitsP21LiquidCrystalDevice_th>
+};
+ 202:	1f 91       	pop	r17
+ 204:	0f 91       	pop	r16
+ 206:	ff 90       	pop	r15
+ 208:	ef 90       	pop	r14
+ 20a:	08 95       	ret
+
+0000020c <_Z14lq_sendCommandP21LiquidCrystalDevice_th>:
+}
+
+
+void lq_sendCommand(LiquidCrystalDevice_t* device, uint8_t command)
+{
+	lq_writeDeviceByte(device, command, 0);
+ 20c:	40 e0       	ldi	r20, 0x00	; 0
+ 20e:	0e 94 ec 00 	call	0x1d8	; 0x1d8 <_Z18lq_writeDeviceByteP21LiquidCrystalDevice_thh>
+}
+ 212:	08 95       	ret
+
+00000214 <_Z16lq_turnOnDisplayP21LiquidCrystalDevice_t>:
+{
+	lq_sendCommand(device, LCD_RETURNHOME);  // set cursor position to zero
+	_delay_us(2000);  // this command takes a long time!
+};
+
+void lq_turnOnDisplay(LiquidCrystalDevice_t* device)
+ 214:	fc 01       	movw	r30, r24
+{
+	device->DisplayControl |= LCD_DISPLAYON;
+ 216:	65 81       	ldd	r22, Z+5	; 0x05
+ 218:	86 2f       	mov	r24, r22
+ 21a:	84 60       	ori	r24, 0x04	; 4
+ 21c:	85 83       	std	Z+5, r24	; 0x05
+	lq_sendCommand(device, LCD_DISPLAYCONTROL | device->DisplayControl);
+ 21e:	6c 60       	ori	r22, 0x0C	; 12
+ 220:	cf 01       	movw	r24, r30
+ 222:	0e 94 06 01 	call	0x20c	; 0x20c <_Z14lq_sendCommandP21LiquidCrystalDevice_th>
+};
+ 226:	08 95       	ret
+
+00000228 <_Z13lq_returnHomeP21LiquidCrystalDevice_t>:
+	lq_sendCommand(device, LCD_SETDDRAMADDR | (column + row_offsets[row]));
+}
+
+void lq_returnHome(LiquidCrystalDevice_t* device)
+{
+	lq_sendCommand(device, LCD_RETURNHOME);  // set cursor position to zero
+ 228:	62 e0       	ldi	r22, 0x02	; 2
+ 22a:	0e 94 06 01 	call	0x20c	; 0x20c <_Z14lq_sendCommandP21LiquidCrystalDevice_th>
+	__asm__ volatile (
+		"1: sbiw %0,1" "\n\t"
+		"brne 1b"
+		: "=w" (__count)
+		: "0" (__count)
+	);
+ 22e:	84 ef       	ldi	r24, 0xF4	; 244
+ 230:	91 e0       	ldi	r25, 0x01	; 1
+ 232:	01 97       	sbiw	r24, 0x01	; 1
+ 234:	f1 f7       	brne	.-4      	; 0x232 <_Z13lq_returnHomeP21LiquidCrystalDevice_t+0xa>
+	_delay_us(2000);  // this command takes a long time!
+};
+ 236:	08 95       	ret
+
+00000238 <_Z12lq_setCursorP21LiquidCrystalDevice_thh>:
+	_delay_us(2000);  // this command takes a long time!
+
+	lq_setCursor(device, 0, 0);
+}
+
+void lq_setCursor(LiquidCrystalDevice_t* device, uint8_t row, uint8_t column)
+ 238:	df 93       	push	r29
+ 23a:	cf 93       	push	r28
+ 23c:	00 d0       	rcall	.+0      	; 0x23e <_Z12lq_setCursorP21LiquidCrystalDevice_thh+0x6>
+ 23e:	00 d0       	rcall	.+0      	; 0x240 <_Z12lq_setCursorP21LiquidCrystalDevice_thh+0x8>
+ 240:	cd b7       	in	r28, 0x3d	; 61
+ 242:	de b7       	in	r29, 0x3e	; 62
+{
+	uint8_t row_offsets[] = { 0x00, 0x40, 0x14, 0x54 };
+ 244:	19 82       	std	Y+1, r1	; 0x01
+ 246:	20 e4       	ldi	r18, 0x40	; 64
+ 248:	2a 83       	std	Y+2, r18	; 0x02
+ 24a:	24 e1       	ldi	r18, 0x14	; 20
+ 24c:	2b 83       	std	Y+3, r18	; 0x03
+ 24e:	24 e5       	ldi	r18, 0x54	; 84
+ 250:	2c 83       	std	Y+4, r18	; 0x04
+
+	lq_sendCommand(device, LCD_SETDDRAMADDR | (column + row_offsets[row]));
+ 252:	fe 01       	movw	r30, r28
+ 254:	e6 0f       	add	r30, r22
+ 256:	f1 1d       	adc	r31, r1
+ 258:	21 81       	ldd	r18, Z+1	; 0x01
+ 25a:	42 0f       	add	r20, r18
+ 25c:	40 68       	ori	r20, 0x80	; 128
+ 25e:	64 2f       	mov	r22, r20
+ 260:	0e 94 06 01 	call	0x20c	; 0x20c <_Z14lq_sendCommandP21LiquidCrystalDevice_th>
+}
+ 264:	0f 90       	pop	r0
+ 266:	0f 90       	pop	r0
+ 268:	0f 90       	pop	r0
+ 26a:	0f 90       	pop	r0
+ 26c:	cf 91       	pop	r28
+ 26e:	df 91       	pop	r29
+ 270:	08 95       	ret
+
+00000272 <_Z8lq_clearP21LiquidCrystalDevice_t>:
+{
+	device->Backlight = LCD_NOBACKLIGHT;
+	lq_transmitI2C(device, 0);
+}
+
+void lq_clear(LiquidCrystalDevice_t* device)
+ 272:	0f 93       	push	r16
+ 274:	1f 93       	push	r17
+ 276:	8c 01       	movw	r16, r24
+{
+	lq_sendCommand(device, LCD_CLEARDISPLAY); // clear display, set cursor position to zero
+ 278:	61 e0       	ldi	r22, 0x01	; 1
+ 27a:	0e 94 06 01 	call	0x20c	; 0x20c <_Z14lq_sendCommandP21LiquidCrystalDevice_th>
+ 27e:	84 ef       	ldi	r24, 0xF4	; 244
+ 280:	91 e0       	ldi	r25, 0x01	; 1
+ 282:	01 97       	sbiw	r24, 0x01	; 1
+ 284:	f1 f7       	brne	.-4      	; 0x282 <_Z8lq_clearP21LiquidCrystalDevice_t+0x10>
+	_delay_us(2000);  // this command takes a long time!
+
+	lq_setCursor(device, 0, 0);
+ 286:	c8 01       	movw	r24, r16
+ 288:	60 e0       	ldi	r22, 0x00	; 0
+ 28a:	40 e0       	ldi	r20, 0x00	; 0
+ 28c:	0e 94 1c 01 	call	0x238	; 0x238 <_Z12lq_setCursorP21LiquidCrystalDevice_thh>
+}
+ 290:	1f 91       	pop	r17
+ 292:	0f 91       	pop	r16
+ 294:	08 95       	ret
+
+00000296 <_Z8lq_printP21LiquidCrystalDevice_tPc>:
+	lq_returnHome(&device);
+
+	return device;
+};
+
+void lq_print(struct LiquidCrystalDevice_t* device, char * value)
+ 296:	0f 93       	push	r16
+ 298:	1f 93       	push	r17
+ 29a:	cf 93       	push	r28
+ 29c:	df 93       	push	r29
+ 29e:	8c 01       	movw	r16, r24
+ 2a0:	eb 01       	movw	r28, r22
+{
+	char letter = *value;
+ 2a2:	68 81       	ld	r22, Y
+
+	while(letter != 0x00)
+ 2a4:	66 23       	and	r22, r22
+ 2a6:	41 f0       	breq	.+16     	; 0x2b8 <_Z8lq_printP21LiquidCrystalDevice_tPc+0x22>
+	{
+		lq_writeDeviceByte(device, letter, LCD_REGISTER_SELECT_BIT);
+ 2a8:	c8 01       	movw	r24, r16
+ 2aa:	41 e0       	ldi	r20, 0x01	; 1
+ 2ac:	0e 94 ec 00 	call	0x1d8	; 0x1d8 <_Z18lq_writeDeviceByteP21LiquidCrystalDevice_thh>
+		letter = *(++value);
+ 2b0:	21 96       	adiw	r28, 0x01	; 1
+ 2b2:	68 81       	ld	r22, Y
+
+void lq_print(struct LiquidCrystalDevice_t* device, char * value)
+{
+	char letter = *value;
+
+	while(letter != 0x00)
+ 2b4:	66 23       	and	r22, r22
+ 2b6:	c1 f7       	brne	.-16     	; 0x2a8 <_Z8lq_printP21LiquidCrystalDevice_tPc+0x12>
+	{
+		lq_writeDeviceByte(device, letter, LCD_REGISTER_SELECT_BIT);
+		letter = *(++value);
+	}
+};
+ 2b8:	df 91       	pop	r29
+ 2ba:	cf 91       	pop	r28
+ 2bc:	1f 91       	pop	r17
+ 2be:	0f 91       	pop	r16
+ 2c0:	08 95       	ret
+
+000002c2 <_Z18lq_turnOnBacklightP21LiquidCrystalDevice_t>:
+
+void lq_turnOnBacklight(struct LiquidCrystalDevice_t* device)
+ 2c2:	fc 01       	movw	r30, r24
+{
+	device->Backlight = LCD_BACKLIGHT;
+ 2c4:	88 e0       	ldi	r24, 0x08	; 8
+ 2c6:	83 83       	std	Z+3, r24	; 0x03
+	lq_transmitI2C(device, 0);
+ 2c8:	cf 01       	movw	r24, r30
+ 2ca:	60 e0       	ldi	r22, 0x00	; 0
+ 2cc:	0e 94 be 00 	call	0x17c	; 0x17c <_Z14lq_transmitI2CP21LiquidCrystalDevice_th>
+}
+ 2d0:	08 95       	ret
+
+000002d2 <_Z7lq_inithhhh>:
+#include "liquid_crystal_i2c.h"
+
+#include <avr/io.h>
+#include <util/delay.h>
+
+LiquidCrystalDevice_t lq_init(uint8_t address, uint8_t columns, uint8_t rows, uint8_t dotSize)
+ 2d2:	ef 92       	push	r14
+ 2d4:	ff 92       	push	r15
+ 2d6:	0f 93       	push	r16
+ 2d8:	1f 93       	push	r17
+ 2da:	df 93       	push	r29
+ 2dc:	cf 93       	push	r28
+ 2de:	cd b7       	in	r28, 0x3d	; 61
+ 2e0:	de b7       	in	r29, 0x3e	; 62
+ 2e2:	2e 97       	sbiw	r28, 0x0e	; 14
+ 2e4:	0f b6       	in	r0, 0x3f	; 63
+ 2e6:	f8 94       	cli
+ 2e8:	de bf       	out	0x3e, r29	; 62
+ 2ea:	0f be       	out	0x3f, r0	; 63
+ 2ec:	cd bf       	out	0x3d, r28	; 61
+{
+	LiquidCrystalDevice_t device;
+
+	device.Address = address;
+ 2ee:	88 87       	std	Y+8, r24	; 0x08
+	device.Columns = columns;
+ 2f0:	69 87       	std	Y+9, r22	; 0x09
+	device.Rows = rows;
+ 2f2:	4a 87       	std	Y+10, r20	; 0x0a
+	device.Backlight = LCD_NOBACKLIGHT;
+ 2f4:	1b 86       	std	Y+11, r1	; 0x0b
+	device.DisplayFunction = LCD_4BITMODE | LCD_1LINE | dotSize;
+ 2f6:	2c 87       	std	Y+12, r18	; 0x0c
+	device.DisplayControl = LCD_DISPLAYON ;
+ 2f8:	84 e0       	ldi	r24, 0x04	; 4
+ 2fa:	8d 87       	std	Y+13, r24	; 0x0d
+
+	// Initialize to default text direction (for roman languages)
+	device.DisplayMode = LCD_ENTRYLEFT | LCD_ENTRYSHIFTDECREMENT;
+ 2fc:	82 e0       	ldi	r24, 0x02	; 2
+ 2fe:	8e 87       	std	Y+14, r24	; 0x0e
+
+	if (rows > 1) {
+ 300:	42 30       	cpi	r20, 0x02	; 2
+ 302:	18 f0       	brcs	.+6      	; 0x30a <_Z7lq_inithhhh+0x38>
+		device.DisplayFunction |= LCD_2LINE;
+ 304:	82 2f       	mov	r24, r18
+ 306:	88 60       	ori	r24, 0x08	; 8
+ 308:	8c 87       	std	Y+12, r24	; 0x0c
+	}
+
+	// for some 1 line displays you can select a 10 pixel high font
+	if ((dotSize != 0) && (rows == 1)) {
+ 30a:	22 23       	and	r18, r18
+ 30c:	29 f0       	breq	.+10     	; 0x318 <_Z7lq_inithhhh+0x46>
+ 30e:	41 30       	cpi	r20, 0x01	; 1
+ 310:	19 f4       	brne	.+6      	; 0x318 <_Z7lq_inithhhh+0x46>
+		device.DisplayFunction |= LCD_5x10DOTS;
+ 312:	8c 85       	ldd	r24, Y+12	; 0x0c
+ 314:	84 60       	ori	r24, 0x04	; 4
+ 316:	8c 87       	std	Y+12, r24	; 0x0c
+ 318:	88 ea       	ldi	r24, 0xA8	; 168
+ 31a:	91 e6       	ldi	r25, 0x61	; 97
+ 31c:	01 97       	sbiw	r24, 0x01	; 1
+ 31e:	f1 f7       	brne	.-4      	; 0x31c <_Z7lq_inithhhh+0x4a>
+	// according to datasheet, we need at least 40ms after power rises above 2.7V
+	// before sending commands. Arduino can turn on way befer 4.5V so we'll wait 50
+	_delay_ms(100);
+	
+	// Now we pull both RS and R/W low to begin commands
+	lq_transmitI2C(&device, LCD_NOBACKLIGHT);	// reset expanderand turn backlight off (Bit 8 =1)
+ 320:	ce 01       	movw	r24, r28
+ 322:	08 96       	adiw	r24, 0x08	; 8
+ 324:	60 e0       	ldi	r22, 0x00	; 0
+ 326:	0e 94 be 00 	call	0x17c	; 0x17c <_Z14lq_transmitI2CP21LiquidCrystalDevice_th>
+ 32a:	20 e1       	ldi	r18, 0x10	; 16
+ 32c:	37 e2       	ldi	r19, 0x27	; 39
+ 32e:	49 e1       	ldi	r20, 0x19	; 25
+ 330:	50 e0       	ldi	r21, 0x00	; 0
+ 332:	ca 01       	movw	r24, r20
+ 334:	01 97       	sbiw	r24, 0x01	; 1
+ 336:	f1 f7       	brne	.-4      	; 0x334 <_Z7lq_inithhhh+0x62>
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ 338:	21 50       	subi	r18, 0x01	; 1
+ 33a:	30 40       	sbci	r19, 0x00	; 0
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ 33c:	d1 f7       	brne	.-12     	; 0x332 <_Z7lq_inithhhh+0x60>
+	//put the LCD into 4 bit mode
+	// this is according to the hitachi HD44780 datasheet
+	// figure 24, pg 46
+	
+	// we start in 8bit mode, try to set 4 bit mode
+	lq_transmitI2C(&device, 0x03 << 4);
+ 33e:	8e 01       	movw	r16, r28
+ 340:	08 5f       	subi	r16, 0xF8	; 248
+ 342:	1f 4f       	sbci	r17, 0xFF	; 255
+ 344:	c8 01       	movw	r24, r16
+ 346:	60 e3       	ldi	r22, 0x30	; 48
+ 348:	0e 94 be 00 	call	0x17c	; 0x17c <_Z14lq_transmitI2CP21LiquidCrystalDevice_th>
+ 34c:	0f 2e       	mov	r0, r31
+ 34e:	f5 e6       	ldi	r31, 0x65	; 101
+ 350:	ef 2e       	mov	r14, r31
+ 352:	f4 e0       	ldi	r31, 0x04	; 4
+ 354:	ff 2e       	mov	r15, r31
+ 356:	f0 2d       	mov	r31, r0
+ 358:	c7 01       	movw	r24, r14
+ 35a:	01 97       	sbiw	r24, 0x01	; 1
+ 35c:	f1 f7       	brne	.-4      	; 0x35a <_Z7lq_inithhhh+0x88>
+	_delay_us(4500); // wait min 4.1ms
+	
+	// second try
+	lq_writeDevice4Bits(&device, 0x03 << 4);
+ 35e:	c8 01       	movw	r24, r16
+ 360:	60 e3       	ldi	r22, 0x30	; 48
+ 362:	0e 94 dd 00 	call	0x1ba	; 0x1ba <_Z19lq_writeDevice4BitsP21LiquidCrystalDevice_th>
+ 366:	c7 01       	movw	r24, r14
+ 368:	01 97       	sbiw	r24, 0x01	; 1
+ 36a:	f1 f7       	brne	.-4      	; 0x368 <_Z7lq_inithhhh+0x96>
+	_delay_us(4500); // wait min 4.1ms
+	
+	// third go!
+	lq_writeDevice4Bits(&device, 0x03 << 4);
+ 36c:	c8 01       	movw	r24, r16
+ 36e:	60 e3       	ldi	r22, 0x30	; 48
+ 370:	0e 94 dd 00 	call	0x1ba	; 0x1ba <_Z19lq_writeDevice4BitsP21LiquidCrystalDevice_th>
+	__asm__ volatile (
+		"1: dec %0" "\n\t"
+		"brne 1b"
+		: "=r" (__count)
+		: "0" (__count)
+	);
+ 374:	82 e3       	ldi	r24, 0x32	; 50
+ 376:	8a 95       	dec	r24
+ 378:	f1 f7       	brne	.-4      	; 0x376 <_Z7lq_inithhhh+0xa4>
+	_delay_us(150); // wait min 150 mics
+	
+	// finally, set to 4-bit interface
+	lq_writeDevice4Bits(&device, 0x02 << 4);
+ 37a:	c8 01       	movw	r24, r16
+ 37c:	60 e2       	ldi	r22, 0x20	; 32
+ 37e:	0e 94 dd 00 	call	0x1ba	; 0x1ba <_Z19lq_writeDevice4BitsP21LiquidCrystalDevice_th>
+
+	// set # lines, font size, etc.
+	lq_sendCommand(&device, LCD_FUNCTIONSET | device.DisplayFunction);
+ 382:	6c 85       	ldd	r22, Y+12	; 0x0c
+ 384:	60 62       	ori	r22, 0x20	; 32
+ 386:	c8 01       	movw	r24, r16
+ 388:	0e 94 06 01 	call	0x20c	; 0x20c <_Z14lq_sendCommandP21LiquidCrystalDevice_th>
+	
+	// turn the display on with no cursor or blinking default
+	lq_turnOnDisplay(&device);
+ 38c:	c8 01       	movw	r24, r16
+ 38e:	0e 94 0a 01 	call	0x214	; 0x214 <_Z16lq_turnOnDisplayP21LiquidCrystalDevice_t>
+	
+	// clear it off
+	lq_clear(&device);
+ 392:	c8 01       	movw	r24, r16
+ 394:	0e 94 39 01 	call	0x272	; 0x272 <_Z8lq_clearP21LiquidCrystalDevice_t>
+	
+	// set the entry mode
+	lq_sendCommand(&device, LCD_ENTRYMODESET | device.DisplayMode);
+ 398:	6e 85       	ldd	r22, Y+14	; 0x0e
+ 39a:	64 60       	ori	r22, 0x04	; 4
+ 39c:	c8 01       	movw	r24, r16
+ 39e:	0e 94 06 01 	call	0x20c	; 0x20c <_Z14lq_sendCommandP21LiquidCrystalDevice_th>
+	
+	lq_returnHome(&device);
+ 3a2:	c8 01       	movw	r24, r16
+ 3a4:	0e 94 14 01 	call	0x228	; 0x228 <_Z13lq_returnHomeP21LiquidCrystalDevice_t>
+
+	return device;
+ 3a8:	de 01       	movw	r26, r28
+ 3aa:	11 96       	adiw	r26, 0x01	; 1
+ 3ac:	f8 01       	movw	r30, r16
+ 3ae:	87 e0       	ldi	r24, 0x07	; 7
+ 3b0:	01 90       	ld	r0, Z+
+ 3b2:	0d 92       	st	X+, r0
+ 3b4:	81 50       	subi	r24, 0x01	; 1
+ 3b6:	e1 f7       	brne	.-8      	; 0x3b0 <_Z7lq_inithhhh+0xde>
+ 3b8:	29 81       	ldd	r18, Y+1	; 0x01
+ 3ba:	3a 81       	ldd	r19, Y+2	; 0x02
+ 3bc:	4b 81       	ldd	r20, Y+3	; 0x03
+ 3be:	5c 81       	ldd	r21, Y+4	; 0x04
+ 3c0:	6d 81       	ldd	r22, Y+5	; 0x05
+ 3c2:	7e 81       	ldd	r23, Y+6	; 0x06
+};
+ 3c4:	8f 81       	ldd	r24, Y+7	; 0x07
+ 3c6:	90 e0       	ldi	r25, 0x00	; 0
+ 3c8:	2e 96       	adiw	r28, 0x0e	; 14
+ 3ca:	0f b6       	in	r0, 0x3f	; 63
+ 3cc:	f8 94       	cli
+ 3ce:	de bf       	out	0x3e, r29	; 62
+ 3d0:	0f be       	out	0x3f, r0	; 63
+ 3d2:	cd bf       	out	0x3d, r28	; 61
+ 3d4:	cf 91       	pop	r28
+ 3d6:	df 91       	pop	r29
+ 3d8:	1f 91       	pop	r17
+ 3da:	0f 91       	pop	r16
+ 3dc:	ff 90       	pop	r15
+ 3de:	ef 90       	pop	r14
+ 3e0:	08 95       	ret
+
+000003e2 <main>:
+enum clock_state {SET_TIME_KEEPER_MODE, IDLE_MODE};
+enum time_state {HOUR, MINUTE};
+enum clock_state state;
+enum time_state time;
+
+int main(void)
+ 3e2:	2f 92       	push	r2
+ 3e4:	3f 92       	push	r3
+ 3e6:	4f 92       	push	r4
+ 3e8:	5f 92       	push	r5
+ 3ea:	6f 92       	push	r6
+ 3ec:	7f 92       	push	r7
+ 3ee:	8f 92       	push	r8
+ 3f0:	9f 92       	push	r9
+ 3f2:	af 92       	push	r10
+ 3f4:	bf 92       	push	r11
+ 3f6:	cf 92       	push	r12
+ 3f8:	df 92       	push	r13
+ 3fa:	ef 92       	push	r14
+ 3fc:	ff 92       	push	r15
+ 3fe:	0f 93       	push	r16
+ 400:	1f 93       	push	r17
+ 402:	df 93       	push	r29
+ 404:	cf 93       	push	r28
+ 406:	cd b7       	in	r28, 0x3d	; 61
+ 408:	de b7       	in	r29, 0x3e	; 62
+ 40a:	a8 97       	sbiw	r28, 0x28	; 40
+ 40c:	0f b6       	in	r0, 0x3f	; 63
+ 40e:	f8 94       	cli
+ 410:	de bf       	out	0x3e, r29	; 62
+ 412:	0f be       	out	0x3f, r0	; 63
+ 414:	cd bf       	out	0x3d, r28	; 61
+{
+	DDRB |= (1<<PORTB0);
+ 416:	e4 e2       	ldi	r30, 0x24	; 36
+ 418:	f0 e0       	ldi	r31, 0x00	; 0
+ 41a:	80 81       	ld	r24, Z
+ 41c:	81 60       	ori	r24, 0x01	; 1
+ 41e:	80 83       	st	Z, r24
+	
+	i2c_master_init(I2C_SCL_FREQUENCY_100);
+ 420:	60 ea       	ldi	r22, 0xA0	; 160
+ 422:	76 e8       	ldi	r23, 0x86	; 134
+ 424:	81 e0       	ldi	r24, 0x01	; 1
+ 426:	90 e0       	ldi	r25, 0x00	; 0
+ 428:	0e 94 53 00 	call	0xa6	; 0xa6 <_Z15i2c_master_initm>
+	LiquidCrystalDevice_t device = lq_init(0x3f, 16, 2, LCD_5x8DOTS); // intialize 4-lines display
+ 42c:	8f e3       	ldi	r24, 0x3F	; 63
+ 42e:	60 e1       	ldi	r22, 0x10	; 16
+ 430:	42 e0       	ldi	r20, 0x02	; 2
+ 432:	20 e0       	ldi	r18, 0x00	; 0
+ 434:	0e 94 69 01 	call	0x2d2	; 0x2d2 <_Z7lq_inithhhh>
+ 438:	2a a3       	std	Y+34, r18	; 0x22
+ 43a:	3b a3       	std	Y+35, r19	; 0x23
+ 43c:	4c a3       	std	Y+36, r20	; 0x24
+ 43e:	5d a3       	std	Y+37, r21	; 0x25
+ 440:	6e a3       	std	Y+38, r22	; 0x26
+ 442:	7f a3       	std	Y+39, r23	; 0x27
+ 444:	88 a7       	std	Y+40, r24	; 0x28
+ 446:	de 01       	movw	r26, r28
+ 448:	50 96       	adiw	r26, 0x10	; 16
+ 44a:	fe 01       	movw	r30, r28
+ 44c:	b2 96       	adiw	r30, 0x22	; 34
+ 44e:	87 e0       	ldi	r24, 0x07	; 7
+ 450:	01 90       	ld	r0, Z+
+ 452:	0d 92       	st	X+, r0
+ 454:	81 50       	subi	r24, 0x01	; 1
+ 456:	e1 f7       	brne	.-8      	; 0x450 <main+0x6e>
+	lq_turnOnBacklight(&device); // simply turning on the backlight
+ 458:	ce 01       	movw	r24, r28
+ 45a:	40 96       	adiw	r24, 0x10	; 16
+ 45c:	0e 94 61 01 	call	0x2c2	; 0x2c2 <_Z18lq_turnOnBacklightP21LiquidCrystalDevice_t>
+	virtuabotixRTC myRTC(5, 6, 7); //PinD 5, 6, 7 are used for CLK, Data, RST respectively
+ 460:	ce 01       	movw	r24, r28
+ 462:	47 96       	adiw	r24, 0x17	; 23
+ 464:	65 e0       	ldi	r22, 0x05	; 5
+ 466:	46 e0       	ldi	r20, 0x06	; 6
+ 468:	27 e0       	ldi	r18, 0x07	; 7
+ 46a:	0e 94 28 04 	call	0x850	; 0x850 <_ZN14virtuabotixRTCC1Ehhh>
+	
+	char snum[5];
+	char mnum[5];
+	char hnum[5];
+	state = IDLE_MODE;
+ 46e:	81 e0       	ldi	r24, 0x01	; 1
+ 470:	80 93 2a 01 	sts	0x012A, r24
+	while(1) {
+		// Check Button PINB 5 state low to switch from IDLE mode to Set time keeper mode
+		// The system is designed to change state only one
+		// When the button is pressed (state low), write time to DS1302 RTC module
+		if(!(PINB & (1<<PINB5)) && state == IDLE_MODE){
+ 474:	0f 2e       	mov	r0, r31
+ 476:	f3 e2       	ldi	r31, 0x23	; 35
+ 478:	cf 2e       	mov	r12, r31
+ 47a:	dd 24       	eor	r13, r13
+ 47c:	f0 2d       	mov	r31, r0
+				lq_print(&device, itoa(myRTC.seconds,snum,10));	// Display sec
+				_delay_ms(1000);
+				break;
+			// Display welcome message in idel mode
+			case IDLE_MODE:
+				lq_setCursor(&device,0,0); // moving cursor to the next line
+ 47e:	ee 24       	eor	r14, r14
+ 480:	ff 24       	eor	r15, r15
+ 482:	68 94       	set
+ 484:	e4 f8       	bld	r14, 4
+ 486:	ec 0e       	add	r14, r28
+ 488:	fd 1e       	adc	r15, r29
+				lq_print(&device, "Hello User!");
+ 48a:	0f 2e       	mov	r0, r31
+ 48c:	fd e0       	ldi	r31, 0x0D	; 13
+ 48e:	8f 2e       	mov	r8, r31
+ 490:	f1 e0       	ldi	r31, 0x01	; 1
+ 492:	9f 2e       	mov	r9, r31
+ 494:	f0 2d       	mov	r31, r0
+				lq_setCursor(&device,1,0); // moving cursor to the next line
+				lq_print(&device, "Welcome To Clock");
+ 496:	0f 2e       	mov	r0, r31
+ 498:	f9 e1       	ldi	r31, 0x19	; 25
+ 49a:	6f 2e       	mov	r6, r31
+ 49c:	f1 e0       	ldi	r31, 0x01	; 1
+ 49e:	7f 2e       	mov	r7, r31
+ 4a0:	f0 2d       	mov	r31, r0
+		}
+		switch(state)
+		{
+			case SET_TIME_KEEPER_MODE:
+				lq_clear(&device);
+				myRTC.updateTime();			// Update time from DS1302 to LCD display constantly
+ 4a2:	0f 2e       	mov	r0, r31
+ 4a4:	f7 e1       	ldi	r31, 0x17	; 23
+ 4a6:	4f 2e       	mov	r4, r31
+ 4a8:	55 24       	eor	r5, r5
+ 4aa:	f0 2d       	mov	r31, r0
+ 4ac:	4c 0e       	add	r4, r28
+ 4ae:	5d 1e       	adc	r5, r29
+				lq_setCursor(&device,0,0); // moving cursor to the next line
+				lq_print(&device, "Time Clock");
+ 4b0:	0f 2e       	mov	r0, r31
+ 4b2:	f0 e0       	ldi	r31, 0x00	; 0
+ 4b4:	2f 2e       	mov	r2, r31
+ 4b6:	f1 e0       	ldi	r31, 0x01	; 1
+ 4b8:	3f 2e       	mov	r3, r31
+ 4ba:	f0 2d       	mov	r31, r0
+				lq_setCursor(&device,1,0); // moving cursor to the next line
+				lq_print(&device, itoa(myRTC.hours,hnum,10));	// Display Hour
+				lq_print(&device, ":");
+ 4bc:	0f 2e       	mov	r0, r31
+ 4be:	fb e0       	ldi	r31, 0x0B	; 11
+ 4c0:	af 2e       	mov	r10, r31
+ 4c2:	f1 e0       	ldi	r31, 0x01	; 1
+ 4c4:	bf 2e       	mov	r11, r31
+ 4c6:	f0 2d       	mov	r31, r0
+	__asm__ volatile (
+		"1: sbiw %0,1" "\n\t"
+		"brne 1b"
+		: "=w" (__count)
+		: "0" (__count)
+	);
+ 4c8:	09 e1       	ldi	r16, 0x19	; 25
+ 4ca:	10 e0       	ldi	r17, 0x00	; 0
+	state = IDLE_MODE;
+	while(1) {
+		// Check Button PINB 5 state low to switch from IDLE mode to Set time keeper mode
+		// The system is designed to change state only one
+		// When the button is pressed (state low), write time to DS1302 RTC module
+		if(!(PINB & (1<<PINB5)) && state == IDLE_MODE){
+ 4cc:	90 91 2a 01 	lds	r25, 0x012A
+ 4d0:	f6 01       	movw	r30, r12
+ 4d2:	80 81       	ld	r24, Z
+ 4d4:	85 fd       	sbrc	r24, 5
+ 4d6:	77 c0       	rjmp	.+238    	; 0x5c6 <main+0x1e4>
+ 4d8:	91 30       	cpi	r25, 0x01	; 1
+ 4da:	09 f0       	breq	.+2      	; 0x4de <main+0xfc>
+ 4dc:	74 c0       	rjmp	.+232    	; 0x5c6 <main+0x1e4>
+ 4de:	80 e5       	ldi	r24, 0x50	; 80
+ 4e0:	93 ec       	ldi	r25, 0xC3	; 195
+ 4e2:	01 97       	sbiw	r24, 0x01	; 1
+ 4e4:	f1 f7       	brne	.-4      	; 0x4e2 <main+0x100>
+			//myRTC.setDS1302Time(55, 29, 13, 5, 23, 1, 2021); // Write Time/Date to the DS1302 RTC module
+			_delay_ms(200);
+			state = SET_TIME_KEEPER_MODE;
+ 4e6:	10 92 2a 01 	sts	0x012A, r1
+ 4ea:	0e c0       	rjmp	.+28     	; 0x508 <main+0x126>
+		// Button cannot switch back to idle mode after change to set time keeper mode
+		} else if(!(PINB & (1<<PINB5)) && state == SET_TIME_KEEPER_MODE){
+ 4ec:	99 23       	and	r25, r25
+ 4ee:	39 f4       	brne	.+14     	; 0x4fe <main+0x11c>
+ 4f0:	80 e5       	ldi	r24, 0x50	; 80
+ 4f2:	93 ec       	ldi	r25, 0xC3	; 195
+ 4f4:	01 97       	sbiw	r24, 0x01	; 1
+ 4f6:	f1 f7       	brne	.-4      	; 0x4f4 <main+0x112>
+			_delay_ms(200);
+			state = SET_TIME_KEEPER_MODE;
+ 4f8:	10 92 2a 01 	sts	0x012A, r1
+ 4fc:	05 c0       	rjmp	.+10     	; 0x508 <main+0x126>
+		}
+		switch(state)
+ 4fe:	99 23       	and	r25, r25
+ 500:	19 f0       	breq	.+6      	; 0x508 <main+0x126>
+ 502:	91 30       	cpi	r25, 0x01	; 1
+ 504:	29 f7       	brne	.-54     	; 0x4d0 <main+0xee>
+ 506:	4c c0       	rjmp	.+152    	; 0x5a0 <main+0x1be>
+		{
+			case SET_TIME_KEEPER_MODE:
+				lq_clear(&device);
+ 508:	c7 01       	movw	r24, r14
+ 50a:	0e 94 39 01 	call	0x272	; 0x272 <_Z8lq_clearP21LiquidCrystalDevice_t>
+				myRTC.updateTime();			// Update time from DS1302 to LCD display constantly
+ 50e:	c2 01       	movw	r24, r4
+ 510:	0e 94 62 04 	call	0x8c4	; 0x8c4 <_ZN14virtuabotixRTC10updateTimeEv>
+				lq_setCursor(&device,0,0); // moving cursor to the next line
+ 514:	c7 01       	movw	r24, r14
+ 516:	60 e0       	ldi	r22, 0x00	; 0
+ 518:	40 e0       	ldi	r20, 0x00	; 0
+ 51a:	0e 94 1c 01 	call	0x238	; 0x238 <_Z12lq_setCursorP21LiquidCrystalDevice_thh>
+				lq_print(&device, "Time Clock");
+ 51e:	c7 01       	movw	r24, r14
+ 520:	b1 01       	movw	r22, r2
+ 522:	0e 94 4b 01 	call	0x296	; 0x296 <_Z8lq_printP21LiquidCrystalDevice_tPc>
+				lq_setCursor(&device,1,0); // moving cursor to the next line
+ 526:	c7 01       	movw	r24, r14
+ 528:	61 e0       	ldi	r22, 0x01	; 1
+ 52a:	40 e0       	ldi	r20, 0x00	; 0
+ 52c:	0e 94 1c 01 	call	0x238	; 0x238 <_Z12lq_setCursorP21LiquidCrystalDevice_thh>
+				lq_print(&device, itoa(myRTC.hours,hnum,10));	// Display Hour
+ 530:	8c 8d       	ldd	r24, Y+28	; 0x1c
+ 532:	90 e0       	ldi	r25, 0x00	; 0
+ 534:	be 01       	movw	r22, r28
+ 536:	65 5f       	subi	r22, 0xF5	; 245
+ 538:	7f 4f       	sbci	r23, 0xFF	; 255
+ 53a:	4a e0       	ldi	r20, 0x0A	; 10
+ 53c:	50 e0       	ldi	r21, 0x00	; 0
+ 53e:	0e 94 3d 05 	call	0xa7a	; 0xa7a <itoa>
+ 542:	bc 01       	movw	r22, r24
+ 544:	c7 01       	movw	r24, r14
+ 546:	0e 94 4b 01 	call	0x296	; 0x296 <_Z8lq_printP21LiquidCrystalDevice_tPc>
+				lq_print(&device, ":");
+ 54a:	c7 01       	movw	r24, r14
+ 54c:	b5 01       	movw	r22, r10
+ 54e:	0e 94 4b 01 	call	0x296	; 0x296 <_Z8lq_printP21LiquidCrystalDevice_tPc>
+				lq_print(&device, itoa(myRTC.minutes,mnum,10));	// Display minute
+ 552:	8b 8d       	ldd	r24, Y+27	; 0x1b
+ 554:	90 e0       	ldi	r25, 0x00	; 0
+ 556:	be 01       	movw	r22, r28
+ 558:	6a 5f       	subi	r22, 0xFA	; 250
+ 55a:	7f 4f       	sbci	r23, 0xFF	; 255
+ 55c:	4a e0       	ldi	r20, 0x0A	; 10
+ 55e:	50 e0       	ldi	r21, 0x00	; 0
+ 560:	0e 94 3d 05 	call	0xa7a	; 0xa7a <itoa>
+ 564:	bc 01       	movw	r22, r24
+ 566:	c7 01       	movw	r24, r14
+ 568:	0e 94 4b 01 	call	0x296	; 0x296 <_Z8lq_printP21LiquidCrystalDevice_tPc>
+				lq_print(&device, ":");
+ 56c:	c7 01       	movw	r24, r14
+ 56e:	b5 01       	movw	r22, r10
+ 570:	0e 94 4b 01 	call	0x296	; 0x296 <_Z8lq_printP21LiquidCrystalDevice_tPc>
+				lq_print(&device, itoa(myRTC.seconds,snum,10));	// Display sec
+ 574:	8a 8d       	ldd	r24, Y+26	; 0x1a
+ 576:	90 e0       	ldi	r25, 0x00	; 0
+ 578:	be 01       	movw	r22, r28
+ 57a:	6f 5f       	subi	r22, 0xFF	; 255
+ 57c:	7f 4f       	sbci	r23, 0xFF	; 255
+ 57e:	4a e0       	ldi	r20, 0x0A	; 10
+ 580:	50 e0       	ldi	r21, 0x00	; 0
+ 582:	0e 94 3d 05 	call	0xa7a	; 0xa7a <itoa>
+ 586:	bc 01       	movw	r22, r24
+ 588:	c7 01       	movw	r24, r14
+ 58a:	0e 94 4b 01 	call	0x296	; 0x296 <_Z8lq_printP21LiquidCrystalDevice_tPc>
+ 58e:	20 e1       	ldi	r18, 0x10	; 16
+ 590:	37 e2       	ldi	r19, 0x27	; 39
+ 592:	c8 01       	movw	r24, r16
+ 594:	01 97       	sbiw	r24, 0x01	; 1
+ 596:	f1 f7       	brne	.-4      	; 0x594 <main+0x1b2>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ 598:	21 50       	subi	r18, 0x01	; 1
+ 59a:	30 40       	sbci	r19, 0x00	; 0
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ 59c:	d1 f7       	brne	.-12     	; 0x592 <main+0x1b0>
+ 59e:	96 cf       	rjmp	.-212    	; 0x4cc <main+0xea>
+				_delay_ms(1000);
+				break;
+			// Display welcome message in idel mode
+			case IDLE_MODE:
+				lq_setCursor(&device,0,0); // moving cursor to the next line
+ 5a0:	c7 01       	movw	r24, r14
+ 5a2:	60 e0       	ldi	r22, 0x00	; 0
+ 5a4:	40 e0       	ldi	r20, 0x00	; 0
+ 5a6:	0e 94 1c 01 	call	0x238	; 0x238 <_Z12lq_setCursorP21LiquidCrystalDevice_thh>
+				lq_print(&device, "Hello User!");
+ 5aa:	c7 01       	movw	r24, r14
+ 5ac:	b4 01       	movw	r22, r8
+ 5ae:	0e 94 4b 01 	call	0x296	; 0x296 <_Z8lq_printP21LiquidCrystalDevice_tPc>
+				lq_setCursor(&device,1,0); // moving cursor to the next line
+ 5b2:	c7 01       	movw	r24, r14
+ 5b4:	61 e0       	ldi	r22, 0x01	; 1
+ 5b6:	40 e0       	ldi	r20, 0x00	; 0
+ 5b8:	0e 94 1c 01 	call	0x238	; 0x238 <_Z12lq_setCursorP21LiquidCrystalDevice_thh>
+				lq_print(&device, "Welcome To Clock");
+ 5bc:	c7 01       	movw	r24, r14
+ 5be:	b3 01       	movw	r22, r6
+ 5c0:	0e 94 4b 01 	call	0x296	; 0x296 <_Z8lq_printP21LiquidCrystalDevice_tPc>
+ 5c4:	83 cf       	rjmp	.-250    	; 0x4cc <main+0xea>
+		if(!(PINB & (1<<PINB5)) && state == IDLE_MODE){
+			//myRTC.setDS1302Time(55, 29, 13, 5, 23, 1, 2021); // Write Time/Date to the DS1302 RTC module
+			_delay_ms(200);
+			state = SET_TIME_KEEPER_MODE;
+		// Button cannot switch back to idle mode after change to set time keeper mode
+		} else if(!(PINB & (1<<PINB5)) && state == SET_TIME_KEEPER_MODE){
+ 5c6:	f6 01       	movw	r30, r12
+ 5c8:	80 81       	ld	r24, Z
+ 5ca:	85 fd       	sbrc	r24, 5
+ 5cc:	98 cf       	rjmp	.-208    	; 0x4fe <main+0x11c>
+ 5ce:	8e cf       	rjmp	.-228    	; 0x4ec <main+0x10a>
+
+000005d0 <_ZN14virtuabotixRTC13_DS1302_startEv>:
+  _DS1302_stop();                                                                                     
+}
+ 
+// DS1302_start Function
+// Since the DS1302 has pull-down resistors, the signals are low (inactive) until the DS1302 is used.
+void virtuabotixRTC::_DS1302_start( void )  {
+ 5d0:	0f 93       	push	r16
+ 5d2:	1f 93       	push	r17
+ 5d4:	cf 93       	push	r28
+ 5d6:	df 93       	push	r29
+ 5d8:	fc 01       	movw	r30, r24
+  PORTD &= ~(1 << DS1302_CE_PIN)|(1 << DS1302_SCLK_PIN);	// By default, PIN RST & CLK are disable     
+ 5da:	ab e2       	ldi	r26, 0x2B	; 43
+ 5dc:	b0 e0       	ldi	r27, 0x00	; 0
+ 5de:	9c 91       	ld	r25, X
+ 5e0:	61 e0       	ldi	r22, 0x01	; 1
+ 5e2:	70 e0       	ldi	r23, 0x00	; 0
+ 5e4:	9b 01       	movw	r18, r22
+ 5e6:	02 80       	ldd	r0, Z+2	; 0x02
+ 5e8:	02 c0       	rjmp	.+4      	; 0x5ee <_ZN14virtuabotixRTC13_DS1302_startEv+0x1e>
+ 5ea:	22 0f       	add	r18, r18
+ 5ec:	33 1f       	adc	r19, r19
+ 5ee:	0a 94       	dec	r0
+ 5f0:	e2 f7       	brpl	.-8      	; 0x5ea <_ZN14virtuabotixRTC13_DS1302_startEv+0x1a>
+ 5f2:	ab 01       	movw	r20, r22
+ 5f4:	00 80       	ld	r0, Z
+ 5f6:	02 c0       	rjmp	.+4      	; 0x5fc <_ZN14virtuabotixRTC13_DS1302_startEv+0x2c>
+ 5f8:	44 0f       	add	r20, r20
+ 5fa:	55 1f       	adc	r21, r21
+ 5fc:	0a 94       	dec	r0
+ 5fe:	e2 f7       	brpl	.-8      	; 0x5f8 <_ZN14virtuabotixRTC13_DS1302_startEv+0x28>
+ 600:	82 2f       	mov	r24, r18
+ 602:	80 95       	com	r24
+ 604:	84 2b       	or	r24, r20
+ 606:	89 23       	and	r24, r25
+ 608:	8c 93       	st	X, r24
+  DDRD |= (1 << DS1302_CE_PIN)|(1 << DS1302_SCLK_PIN)|(1 << DS1302_IO_PIN) ; // Output PIND 5, 6, 7 for CLK, Data, RST Pin respectively 
+ 60a:	0a e2       	ldi	r16, 0x2A	; 42
+ 60c:	10 e0       	ldi	r17, 0x00	; 0
+ 60e:	e8 01       	movw	r28, r16
+ 610:	98 81       	ld	r25, Y
+ 612:	82 2f       	mov	r24, r18
+ 614:	84 2b       	or	r24, r20
+ 616:	89 2b       	or	r24, r25
+ 618:	01 80       	ldd	r0, Z+1	; 0x01
+ 61a:	02 c0       	rjmp	.+4      	; 0x620 <_ZN14virtuabotixRTC13_DS1302_startEv+0x50>
+ 61c:	66 0f       	add	r22, r22
+ 61e:	77 1f       	adc	r23, r23
+ 620:	0a 94       	dec	r0
+ 622:	e2 f7       	brpl	.-8      	; 0x61c <_ZN14virtuabotixRTC13_DS1302_startEv+0x4c>
+ 624:	86 2b       	or	r24, r22
+ 626:	88 83       	st	Y, r24
+  PORTD |= (1 << DS1302_CE_PIN);							// start the session
+ 628:	8c 91       	ld	r24, X
+ 62a:	28 2b       	or	r18, r24
+ 62c:	2c 93       	st	X, r18
+ 62e:	88 ee       	ldi	r24, 0xE8	; 232
+ 630:	93 e0       	ldi	r25, 0x03	; 3
+ 632:	01 97       	sbiw	r24, 0x01	; 1
+ 634:	f1 f7       	brne	.-4      	; 0x632 <_ZN14virtuabotixRTC13_DS1302_startEv+0x62>
+  _delay_ms(4)    ;											// tCC = 4ms
+}
+ 636:	df 91       	pop	r29
+ 638:	cf 91       	pop	r28
+ 63a:	1f 91       	pop	r17
+ 63c:	0f 91       	pop	r16
+ 63e:	08 95       	ret
+
+00000640 <_ZN14virtuabotixRTC12_DS1302_stopEv>:
+
+// DS1302_stop Function
+// A helper function to finish the communication.
+void virtuabotixRTC::_DS1302_stop( void )  {
+  PORTD &= ~(1 << DS1302_CE_PIN); // Turn off PIN RST
+ 640:	eb e2       	ldi	r30, 0x2B	; 43
+ 642:	f0 e0       	ldi	r31, 0x00	; 0
+ 644:	40 81       	ld	r20, Z
+ 646:	21 e0       	ldi	r18, 0x01	; 1
+ 648:	30 e0       	ldi	r19, 0x00	; 0
+ 64a:	dc 01       	movw	r26, r24
+ 64c:	12 96       	adiw	r26, 0x02	; 2
+ 64e:	0c 90       	ld	r0, X
+ 650:	02 c0       	rjmp	.+4      	; 0x656 <_ZN14virtuabotixRTC12_DS1302_stopEv+0x16>
+ 652:	22 0f       	add	r18, r18
+ 654:	33 1f       	adc	r19, r19
+ 656:	0a 94       	dec	r0
+ 658:	e2 f7       	brpl	.-8      	; 0x652 <_ZN14virtuabotixRTC12_DS1302_stopEv+0x12>
+ 65a:	20 95       	com	r18
+ 65c:	24 23       	and	r18, r20
+ 65e:	20 83       	st	Z, r18
+ 660:	88 ee       	ldi	r24, 0xE8	; 232
+ 662:	93 e0       	ldi	r25, 0x03	; 3
+ 664:	01 97       	sbiw	r24, 0x01	; 1
+ 666:	f1 f7       	brne	.-4      	; 0x664 <_ZN14virtuabotixRTC12_DS1302_stopEv+0x24>
+  _delay_ms(4);                   // tCWH = 4ms
+}
+ 668:	08 95       	ret
+
+0000066a <_ZN14virtuabotixRTC18_DS1302_togglereadEv>:
+
+// DS1302_toggleread Function Begin
+// A helper function for reading a byte with bit toggle.  This function assumes that the SCLK is still high.
+uint8_t virtuabotixRTC::_DS1302_toggleread( void )  {
+ 66a:	bf 92       	push	r11
+ 66c:	cf 92       	push	r12
+ 66e:	df 92       	push	r13
+ 670:	ef 92       	push	r14
+ 672:	ff 92       	push	r15
+ 674:	0f 93       	push	r16
+ 676:	1f 93       	push	r17
+ 678:	cf 93       	push	r28
+ 67a:	df 93       	push	r29
+ 67c:	fc 01       	movw	r30, r24
+  data = 0;
+
+// Issue a clock pulse for the next databit.  If the 'togglewrite' function was used before this
+// function, the SCLK is already high.
+  for( i = 0; i <= 7; i++ )  {   
+	PORTD |= (1 << DS1302_SCLK_PIN);
+ 67e:	21 e0       	ldi	r18, 0x01	; 1
+ 680:	30 e0       	ldi	r19, 0x00	; 0
+ 682:	c9 01       	movw	r24, r18
+ 684:	00 80       	ld	r0, Z
+ 686:	02 c0       	rjmp	.+4      	; 0x68c <_ZN14virtuabotixRTC18_DS1302_togglereadEv+0x22>
+ 688:	88 0f       	add	r24, r24
+ 68a:	99 1f       	adc	r25, r25
+ 68c:	0a 94       	dec	r0
+ 68e:	e2 f7       	brpl	.-8      	; 0x688 <_ZN14virtuabotixRTC18_DS1302_togglereadEv+0x1e>
+ 690:	78 2f       	mov	r23, r24
+	_delay_ms(1);
+	
+    // Clock down, data is ready after some time.
+    PORTD &=~ (1 << DS1302_SCLK_PIN);  
+ 692:	b8 2e       	mov	r11, r24
+ 694:	b0 94       	com	r11
+ 696:	79 01       	movw	r14, r18
+ 698:	01 80       	ldd	r0, Z+1	; 0x01
+ 69a:	02 c0       	rjmp	.+4      	; 0x6a0 <_ZN14virtuabotixRTC18_DS1302_togglereadEv+0x36>
+ 69c:	ee 0c       	add	r14, r14
+ 69e:	ff 1c       	adc	r15, r15
+ 6a0:	0a 94       	dec	r0
+ 6a2:	e2 f7       	brpl	.-8      	; 0x69c <_ZN14virtuabotixRTC18_DS1302_togglereadEv+0x32>
+ 6a4:	60 e0       	ldi	r22, 0x00	; 0
+ 6a6:	40 e0       	ldi	r20, 0x00	; 0
+ 6a8:	50 e0       	ldi	r21, 0x00	; 0
+  data = 0;
+
+// Issue a clock pulse for the next databit.  If the 'togglewrite' function was used before this
+// function, the SCLK is already high.
+  for( i = 0; i <= 7; i++ )  {   
+	PORTD |= (1 << DS1302_SCLK_PIN);
+ 6aa:	eb e2       	ldi	r30, 0x2B	; 43
+ 6ac:	f0 e0       	ldi	r31, 0x00	; 0
+ 6ae:	ca ef       	ldi	r28, 0xFA	; 250
+ 6b0:	d0 e0       	ldi	r29, 0x00	; 0
+    // Clock down, data is ready after some time.
+    PORTD &=~ (1 << DS1302_SCLK_PIN);  
+	_delay_ms(1);
+
+    // read bit, and set it in place in 'data' variable
+	bitWrite( data, i,  (PIND & (1<<DS1302_IO_PIN)));                                                                                              //|    |
+ 6b2:	0f 2e       	mov	r0, r31
+ 6b4:	f9 e2       	ldi	r31, 0x29	; 41
+ 6b6:	cf 2e       	mov	r12, r31
+ 6b8:	dd 24       	eor	r13, r13
+ 6ba:	f0 2d       	mov	r31, r0
+ 6bc:	01 e0       	ldi	r16, 0x01	; 1
+ 6be:	10 e0       	ldi	r17, 0x00	; 0
+ 6c0:	20 e0       	ldi	r18, 0x00	; 0
+ 6c2:	30 e0       	ldi	r19, 0x00	; 0
+  data = 0;
+
+// Issue a clock pulse for the next databit.  If the 'togglewrite' function was used before this
+// function, the SCLK is already high.
+  for( i = 0; i <= 7; i++ )  {   
+	PORTD |= (1 << DS1302_SCLK_PIN);
+ 6c4:	80 81       	ld	r24, Z
+ 6c6:	87 2b       	or	r24, r23
+ 6c8:	80 83       	st	Z, r24
+ 6ca:	ce 01       	movw	r24, r28
+ 6cc:	01 97       	sbiw	r24, 0x01	; 1
+ 6ce:	f1 f7       	brne	.-4      	; 0x6cc <_ZN14virtuabotixRTC18_DS1302_togglereadEv+0x62>
+	_delay_ms(1);
+	
+    // Clock down, data is ready after some time.
+    PORTD &=~ (1 << DS1302_SCLK_PIN);  
+ 6d0:	80 81       	ld	r24, Z
+ 6d2:	8b 21       	and	r24, r11
+ 6d4:	80 83       	st	Z, r24
+ 6d6:	ce 01       	movw	r24, r28
+ 6d8:	01 97       	sbiw	r24, 0x01	; 1
+ 6da:	f1 f7       	brne	.-4      	; 0x6d8 <_ZN14virtuabotixRTC18_DS1302_togglereadEv+0x6e>
+	_delay_ms(1);
+
+    // read bit, and set it in place in 'data' variable
+	bitWrite( data, i,  (PIND & (1<<DS1302_IO_PIN)));                                                                                              //|    |
+ 6dc:	d6 01       	movw	r26, r12
+ 6de:	8c 91       	ld	r24, X
+ 6e0:	90 e0       	ldi	r25, 0x00	; 0
+ 6e2:	8e 21       	and	r24, r14
+ 6e4:	9f 21       	and	r25, r15
+ 6e6:	89 2b       	or	r24, r25
+ 6e8:	61 f0       	breq	.+24     	; 0x702 <_ZN14virtuabotixRTC18_DS1302_togglereadEv+0x98>
+ 6ea:	d9 01       	movw	r26, r18
+ 6ec:	c8 01       	movw	r24, r16
+ 6ee:	04 2e       	mov	r0, r20
+ 6f0:	04 c0       	rjmp	.+8      	; 0x6fa <_ZN14virtuabotixRTC18_DS1302_togglereadEv+0x90>
+ 6f2:	88 0f       	add	r24, r24
+ 6f4:	99 1f       	adc	r25, r25
+ 6f6:	aa 1f       	adc	r26, r26
+ 6f8:	bb 1f       	adc	r27, r27
+ 6fa:	0a 94       	dec	r0
+ 6fc:	d2 f7       	brpl	.-12     	; 0x6f2 <_ZN14virtuabotixRTC18_DS1302_togglereadEv+0x88>
+ 6fe:	68 2b       	or	r22, r24
+ 700:	0c c0       	rjmp	.+24     	; 0x71a <_ZN14virtuabotixRTC18_DS1302_togglereadEv+0xb0>
+ 702:	d9 01       	movw	r26, r18
+ 704:	c8 01       	movw	r24, r16
+ 706:	04 2e       	mov	r0, r20
+ 708:	04 c0       	rjmp	.+8      	; 0x712 <_ZN14virtuabotixRTC18_DS1302_togglereadEv+0xa8>
+ 70a:	88 0f       	add	r24, r24
+ 70c:	99 1f       	adc	r25, r25
+ 70e:	aa 1f       	adc	r26, r26
+ 710:	bb 1f       	adc	r27, r27
+ 712:	0a 94       	dec	r0
+ 714:	d2 f7       	brpl	.-12     	; 0x70a <_ZN14virtuabotixRTC18_DS1302_togglereadEv+0xa0>
+ 716:	80 95       	com	r24
+ 718:	68 23       	and	r22, r24
+ 71a:	4f 5f       	subi	r20, 0xFF	; 255
+ 71c:	5f 4f       	sbci	r21, 0xFF	; 255
+  uint8_t i, data;
+  data = 0;
+
+// Issue a clock pulse for the next databit.  If the 'togglewrite' function was used before this
+// function, the SCLK is already high.
+  for( i = 0; i <= 7; i++ )  {   
+ 71e:	48 30       	cpi	r20, 0x08	; 8
+ 720:	51 05       	cpc	r21, r1
+ 722:	81 f6       	brne	.-96     	; 0x6c4 <_ZN14virtuabotixRTC18_DS1302_togglereadEv+0x5a>
+
+    // read bit, and set it in place in 'data' variable
+	bitWrite( data, i,  (PIND & (1<<DS1302_IO_PIN)));                                                                                              //|    |
+  }
+  return( data );
+}
+ 724:	86 2f       	mov	r24, r22
+ 726:	df 91       	pop	r29
+ 728:	cf 91       	pop	r28
+ 72a:	1f 91       	pop	r17
+ 72c:	0f 91       	pop	r16
+ 72e:	ff 90       	pop	r15
+ 730:	ef 90       	pop	r14
+ 732:	df 90       	pop	r13
+ 734:	cf 90       	pop	r12
+ 736:	bf 90       	pop	r11
+ 738:	08 95       	ret
+
+0000073a <_ZN14virtuabotixRTC19_DS1302_togglewriteEhh>:
+
+//DS1302_togglewrite Function Begin
+// A helper function for writing a byte with bit toggle.  The 'release' parameter is for a read after   
+// this write.  It will release the I/O-line and will keep the SCLK high.                               
+void virtuabotixRTC::_DS1302_togglewrite( uint8_t data, uint8_t release)  {               
+ 73a:	ef 92       	push	r14
+ 73c:	ff 92       	push	r15
+ 73e:	0f 93       	push	r16
+ 740:	1f 93       	push	r17
+ 742:	cf 93       	push	r28
+ 744:	df 93       	push	r29
+ 746:	ec 01       	movw	r28, r24
+ 748:	f4 2e       	mov	r15, r20
+	{
+		PORTD |= (1 << DS1302_IO_PIN);
+	}else PORTD &= ~(1 << DS1302_IO_PIN);
+    _delay_ms(1);                                                                                   
+    // clock up, data is read by DS1302                             
+	PORTD |= (1 << DS1302_SCLK_PIN);
+ 74a:	81 e0       	ldi	r24, 0x01	; 1
+ 74c:	90 e0       	ldi	r25, 0x00	; 0
+ 74e:	08 80       	ld	r0, Y
+ 750:	02 c0       	rjmp	.+4      	; 0x756 <_ZN14virtuabotixRTC19_DS1302_togglewriteEhh+0x1c>
+ 752:	88 0f       	add	r24, r24
+ 754:	99 1f       	adc	r25, r25
+ 756:	0a 94       	dec	r0
+ 758:	e2 f7       	brpl	.-8      	; 0x752 <_ZN14virtuabotixRTC19_DS1302_togglewriteEhh+0x18>
+ 75a:	38 2f       	mov	r19, r24
+//  If this write is followed by a read, the I/O-line should be released after the last bit, before the  
+//  clock line is made low.  This is according the datasheet. If I/O line would not be released, a shortcut spike on the I/O-line could happen.         
+    if( release && i == 7 )  {                                                                           
+	  DDRD &= ~(1 << DS1302_IO_PIN) ;                                                                
+    }  else  {                                                                                           
+	  PORTD &= ~(1 << DS1302_SCLK_PIN) ;                                                            
+ 75c:	e8 2e       	mov	r14, r24
+ 75e:	e0 94       	com	r14
+ 760:	a0 e0       	ldi	r26, 0x00	; 0
+ 762:	b0 e0       	ldi	r27, 0x00	; 0
+void virtuabotixRTC::_DS1302_togglewrite( uint8_t data, uint8_t release)  {               
+	int i;                                                                                       
+                                                                                           
+	for( i = 0; i <= 7; i++ )  {                                                                     
+    // set a bit of the data on the I/O-line                                                                                                        
+	if(bitRead(data, i))
+ 764:	70 e0       	ldi	r23, 0x00	; 0
+	{
+		PORTD |= (1 << DS1302_IO_PIN);
+	}else PORTD &= ~(1 << DS1302_IO_PIN);
+ 766:	eb e2       	ldi	r30, 0x2B	; 43
+ 768:	f0 e0       	ldi	r31, 0x00	; 0
+ 76a:	01 e0       	ldi	r16, 0x01	; 1
+ 76c:	10 e0       	ldi	r17, 0x00	; 0
+ 76e:	4a ef       	ldi	r20, 0xFA	; 250
+ 770:	50 e0       	ldi	r21, 0x00	; 0
+void virtuabotixRTC::_DS1302_togglewrite( uint8_t data, uint8_t release)  {               
+	int i;                                                                                       
+                                                                                           
+	for( i = 0; i <= 7; i++ )  {                                                                     
+    // set a bit of the data on the I/O-line                                                                                                        
+	if(bitRead(data, i))
+ 772:	cb 01       	movw	r24, r22
+ 774:	0a 2e       	mov	r0, r26
+ 776:	02 c0       	rjmp	.+4      	; 0x77c <_ZN14virtuabotixRTC19_DS1302_togglewriteEhh+0x42>
+ 778:	95 95       	asr	r25
+ 77a:	87 95       	ror	r24
+ 77c:	0a 94       	dec	r0
+ 77e:	e2 f7       	brpl	.-8      	; 0x778 <_ZN14virtuabotixRTC19_DS1302_togglewriteEhh+0x3e>
+ 780:	80 ff       	sbrs	r24, 0
+ 782:	0b c0       	rjmp	.+22     	; 0x79a <_ZN14virtuabotixRTC19_DS1302_togglewriteEhh+0x60>
+	{
+		PORTD |= (1 << DS1302_IO_PIN);
+ 784:	20 81       	ld	r18, Z
+ 786:	c8 01       	movw	r24, r16
+ 788:	09 80       	ldd	r0, Y+1	; 0x01
+ 78a:	02 c0       	rjmp	.+4      	; 0x790 <_ZN14virtuabotixRTC19_DS1302_togglewriteEhh+0x56>
+ 78c:	88 0f       	add	r24, r24
+ 78e:	99 1f       	adc	r25, r25
+ 790:	0a 94       	dec	r0
+ 792:	e2 f7       	brpl	.-8      	; 0x78c <_ZN14virtuabotixRTC19_DS1302_togglewriteEhh+0x52>
+ 794:	28 2b       	or	r18, r24
+ 796:	20 83       	st	Z, r18
+ 798:	0b c0       	rjmp	.+22     	; 0x7b0 <_ZN14virtuabotixRTC19_DS1302_togglewriteEhh+0x76>
+	}else PORTD &= ~(1 << DS1302_IO_PIN);
+ 79a:	20 81       	ld	r18, Z
+ 79c:	c8 01       	movw	r24, r16
+ 79e:	09 80       	ldd	r0, Y+1	; 0x01
+ 7a0:	02 c0       	rjmp	.+4      	; 0x7a6 <_ZN14virtuabotixRTC19_DS1302_togglewriteEhh+0x6c>
+ 7a2:	88 0f       	add	r24, r24
+ 7a4:	99 1f       	adc	r25, r25
+ 7a6:	0a 94       	dec	r0
+ 7a8:	e2 f7       	brpl	.-8      	; 0x7a2 <_ZN14virtuabotixRTC19_DS1302_togglewriteEhh+0x68>
+ 7aa:	80 95       	com	r24
+ 7ac:	82 23       	and	r24, r18
+ 7ae:	80 83       	st	Z, r24
+ 7b0:	ca 01       	movw	r24, r20
+ 7b2:	01 97       	sbiw	r24, 0x01	; 1
+ 7b4:	f1 f7       	brne	.-4      	; 0x7b2 <_ZN14virtuabotixRTC19_DS1302_togglewriteEhh+0x78>
+    _delay_ms(1);                                                                                   
+    // clock up, data is read by DS1302                             
+	PORTD |= (1 << DS1302_SCLK_PIN);
+ 7b6:	80 81       	ld	r24, Z
+ 7b8:	83 2b       	or	r24, r19
+ 7ba:	80 83       	st	Z, r24
+ 7bc:	ca 01       	movw	r24, r20
+ 7be:	01 97       	sbiw	r24, 0x01	; 1
+ 7c0:	f1 f7       	brne	.-4      	; 0x7be <_ZN14virtuabotixRTC19_DS1302_togglewriteEhh+0x84>
+    _delay_ms(1);      
+                                                                                                         
+//  If this write is followed by a read, the I/O-line should be released after the last bit, before the  
+//  clock line is made low.  This is according the datasheet. If I/O line would not be released, a shortcut spike on the I/O-line could happen.         
+    if( release && i == 7 )  {                                                                           
+ 7c2:	ff 20       	and	r15, r15
+ 7c4:	91 f0       	breq	.+36     	; 0x7ea <_ZN14virtuabotixRTC19_DS1302_togglewriteEhh+0xb0>
+ 7c6:	a7 30       	cpi	r26, 0x07	; 7
+ 7c8:	b1 05       	cpc	r27, r1
+ 7ca:	79 f4       	brne	.+30     	; 0x7ea <_ZN14virtuabotixRTC19_DS1302_togglewriteEhh+0xb0>
+	  DDRD &= ~(1 << DS1302_IO_PIN) ;                                                                
+ 7cc:	ea e2       	ldi	r30, 0x2A	; 42
+ 7ce:	f0 e0       	ldi	r31, 0x00	; 0
+ 7d0:	20 81       	ld	r18, Z
+ 7d2:	81 e0       	ldi	r24, 0x01	; 1
+ 7d4:	90 e0       	ldi	r25, 0x00	; 0
+ 7d6:	09 80       	ldd	r0, Y+1	; 0x01
+ 7d8:	02 c0       	rjmp	.+4      	; 0x7de <_ZN14virtuabotixRTC19_DS1302_togglewriteEhh+0xa4>
+ 7da:	88 0f       	add	r24, r24
+ 7dc:	99 1f       	adc	r25, r25
+ 7de:	0a 94       	dec	r0
+ 7e0:	e2 f7       	brpl	.-8      	; 0x7da <_ZN14virtuabotixRTC19_DS1302_togglewriteEhh+0xa0>
+ 7e2:	80 95       	com	r24
+ 7e4:	82 23       	and	r24, r18
+ 7e6:	80 83       	st	Z, r24
+ 7e8:	0b c0       	rjmp	.+22     	; 0x800 <_ZN14virtuabotixRTC19_DS1302_togglewriteEhh+0xc6>
+    }  else  {                                                                                           
+	  PORTD &= ~(1 << DS1302_SCLK_PIN) ;                                                            
+ 7ea:	80 81       	ld	r24, Z
+ 7ec:	8e 21       	and	r24, r14
+ 7ee:	80 83       	st	Z, r24
+ 7f0:	ca 01       	movw	r24, r20
+ 7f2:	01 97       	sbiw	r24, 0x01	; 1
+ 7f4:	f1 f7       	brne	.-4      	; 0x7f2 <_ZN14virtuabotixRTC19_DS1302_togglewriteEhh+0xb8>
+// A helper function for writing a byte with bit toggle.  The 'release' parameter is for a read after   
+// this write.  It will release the I/O-line and will keep the SCLK high.                               
+void virtuabotixRTC::_DS1302_togglewrite( uint8_t data, uint8_t release)  {               
+	int i;                                                                                       
+                                                                                           
+	for( i = 0; i <= 7; i++ )  {                                                                     
+ 7f6:	11 96       	adiw	r26, 0x01	; 1
+ 7f8:	a8 30       	cpi	r26, 0x08	; 8
+ 7fa:	b1 05       	cpc	r27, r1
+ 7fc:	09 f0       	breq	.+2      	; 0x800 <_ZN14virtuabotixRTC19_DS1302_togglewriteEhh+0xc6>
+ 7fe:	b9 cf       	rjmp	.-142    	; 0x772 <_ZN14virtuabotixRTC19_DS1302_togglewriteEhh+0x38>
+    }  else  {                                                                                           
+	  PORTD &= ~(1 << DS1302_SCLK_PIN) ;                                                            
+	   _delay_ms(1);
+    }                                                                                                    
+  }                                                                                                      
+}                        
+ 800:	df 91       	pop	r29
+ 802:	cf 91       	pop	r28
+ 804:	1f 91       	pop	r17
+ 806:	0f 91       	pop	r16
+ 808:	ff 90       	pop	r15
+ 80a:	ef 90       	pop	r14
+ 80c:	08 95       	ret
+
+0000080e <_ZN14virtuabotixRTC12DS1302_writeEih>:
+                                                                                               
+  return (data);                                                                                        
+}                                               
+                                                                      
+// DS1302_write Function                                                                      
+void virtuabotixRTC::DS1302_write( int address, uint8_t data)  {                        
+ 80e:	df 92       	push	r13
+ 810:	ef 92       	push	r14
+ 812:	ff 92       	push	r15
+ 814:	0f 93       	push	r16
+ 816:	1f 93       	push	r17
+ 818:	8c 01       	movw	r16, r24
+ 81a:	7b 01       	movw	r14, r22
+ 81c:	d4 2e       	mov	r13, r20
+  // clear lowest bit (read bit) in address
+  bitClear(address, DS1302_READBIT);                
+  _DS1302_start();                                                                                
+ 81e:	0e 94 e8 02 	call	0x5d0	; 0x5d0 <_ZN14virtuabotixRTC13_DS1302_startEv>
+                                                                                         
+  // don't release the I/O-line                                                                      
+  _DS1302_togglewrite(address, false);                                                                
+ 822:	8e ef       	ldi	r24, 0xFE	; 254
+ 824:	9f ef       	ldi	r25, 0xFF	; 255
+ 826:	e8 22       	and	r14, r24
+ 828:	f9 22       	and	r15, r25
+ 82a:	c8 01       	movw	r24, r16
+ 82c:	6e 2d       	mov	r22, r14
+ 82e:	40 e0       	ldi	r20, 0x00	; 0
+ 830:	0e 94 9d 03 	call	0x73a	; 0x73a <_ZN14virtuabotixRTC19_DS1302_togglewriteEhh>
+                                                                                                     
+  // don't release the I/O-line                                                                       
+  _DS1302_togglewrite( data, false);                                                                   
+ 834:	c8 01       	movw	r24, r16
+ 836:	6d 2d       	mov	r22, r13
+ 838:	40 e0       	ldi	r20, 0x00	; 0
+ 83a:	0e 94 9d 03 	call	0x73a	; 0x73a <_ZN14virtuabotixRTC19_DS1302_togglewriteEhh>
+  _DS1302_stop();                                                                                     
+ 83e:	c8 01       	movw	r24, r16
+ 840:	0e 94 20 03 	call	0x640	; 0x640 <_ZN14virtuabotixRTC12_DS1302_stopEv>
+}
+ 844:	1f 91       	pop	r17
+ 846:	0f 91       	pop	r16
+ 848:	ff 90       	pop	r15
+ 84a:	ef 90       	pop	r14
+ 84c:	df 90       	pop	r13
+ 84e:	08 95       	ret
+
+00000850 <_ZN14virtuabotixRTCC1Ehhh>:
+#define DS1302_TCS3  DS1302_D7                                                                         
+                                                                                                         
+//  virtuabotixRTC Function                      
+//  This is the CONSTRUCTOR of the class.  It sets the pins assignments for the component, as well as    
+//  the Clock Enable and the trickle charge disablement.                                                
+virtuabotixRTC::virtuabotixRTC(uint8_t inSCLK, uint8_t inIO, uint8_t inC_E)   {                      
+ 850:	0f 93       	push	r16
+ 852:	1f 93       	push	r17
+ 854:	8c 01       	movw	r16, r24
+  SCLK = inSCLK;                                                                                     
+ 856:	fc 01       	movw	r30, r24
+ 858:	60 83       	st	Z, r22
+  IO = inIO;                                                                                          
+ 85a:	41 83       	std	Z+1, r20	; 0x01
+  C_E = inC_E;                                                                                         
+ 85c:	22 83       	std	Z+2, r18	; 0x02
+  DS1302_write (DS1302_ENABLE, 0);                         // Sets the Clock Enable to ON.              
+ 85e:	6e e8       	ldi	r22, 0x8E	; 142
+ 860:	70 e0       	ldi	r23, 0x00	; 0
+ 862:	40 e0       	ldi	r20, 0x00	; 0
+ 864:	0e 94 07 04 	call	0x80e	; 0x80e <_ZN14virtuabotixRTC12DS1302_writeEih>
+  DS1302_write (DS1302_TRICKLE, 0x00);                     // Disable Trickle Charger.                 
+ 868:	c8 01       	movw	r24, r16
+ 86a:	60 e9       	ldi	r22, 0x90	; 144
+ 86c:	70 e0       	ldi	r23, 0x00	; 0
+ 86e:	40 e0       	ldi	r20, 0x00	; 0
+ 870:	0e 94 07 04 	call	0x80e	; 0x80e <_ZN14virtuabotixRTC12DS1302_writeEih>
+}                  
+ 874:	1f 91       	pop	r17
+ 876:	0f 91       	pop	r16
+ 878:	08 95       	ret
+
+0000087a <_ZN14virtuabotixRTC23DS1302_clock_burst_readEPh>:
+// instantiation of the struct object
+ds1302_struct rtc;     // Creates the Real Time Clock object
+
+//  DS1302_clock_burst_read Function Begin
+//  This function reads 8 bytes clock data in burst mode from the DS1302..                                                  
+void virtuabotixRTC::DS1302_clock_burst_read( uint8_t *p)  {                                        
+ 87a:	ef 92       	push	r14
+ 87c:	ff 92       	push	r15
+ 87e:	0f 93       	push	r16
+ 880:	1f 93       	push	r17
+ 882:	cf 93       	push	r28
+ 884:	df 93       	push	r29
+ 886:	8c 01       	movw	r16, r24
+ 888:	7b 01       	movw	r14, r22
+  int i;                                                                                          
+  _DS1302_start();                                                                                 
+ 88a:	0e 94 e8 02 	call	0x5d0	; 0x5d0 <_ZN14virtuabotixRTC13_DS1302_startEv>
+                                                                                                       
+// Instead of the address, the CLOCK_BURST_READ command is issued the I/O-line is released for the data  
+  _DS1302_togglewrite( DS1302_CLOCK_BURST_READ, true);                                                  
+ 88e:	c8 01       	movw	r24, r16
+ 890:	6f eb       	ldi	r22, 0xBF	; 191
+ 892:	41 e0       	ldi	r20, 0x01	; 1
+ 894:	0e 94 9d 03 	call	0x73a	; 0x73a <_ZN14virtuabotixRTC19_DS1302_togglewriteEhh>
+ 898:	c0 e0       	ldi	r28, 0x00	; 0
+ 89a:	d0 e0       	ldi	r29, 0x00	; 0
+                                                                                                        
+  for( i=0; i<8; i++)  {                                                                                
+    *p++ = _DS1302_toggleread();                                                                   
+ 89c:	c8 01       	movw	r24, r16
+ 89e:	0e 94 35 03 	call	0x66a	; 0x66a <_ZN14virtuabotixRTC18_DS1302_togglereadEv>
+ 8a2:	f7 01       	movw	r30, r14
+ 8a4:	81 93       	st	Z+, r24
+ 8a6:	7f 01       	movw	r14, r30
+  _DS1302_start();                                                                                 
+                                                                                                       
+// Instead of the address, the CLOCK_BURST_READ command is issued the I/O-line is released for the data  
+  _DS1302_togglewrite( DS1302_CLOCK_BURST_READ, true);                                                  
+                                                                                                        
+  for( i=0; i<8; i++)  {                                                                                
+ 8a8:	21 96       	adiw	r28, 0x01	; 1
+ 8aa:	c8 30       	cpi	r28, 0x08	; 8
+ 8ac:	d1 05       	cpc	r29, r1
+ 8ae:	b1 f7       	brne	.-20     	; 0x89c <_ZN14virtuabotixRTC23DS1302_clock_burst_readEPh+0x22>
+    *p++ = _DS1302_toggleread();                                                                   
+  }                                                                                                    
+  _DS1302_stop();                                                                           
+ 8b0:	c8 01       	movw	r24, r16
+ 8b2:	0e 94 20 03 	call	0x640	; 0x640 <_ZN14virtuabotixRTC12_DS1302_stopEv>
+}                                     
+ 8b6:	df 91       	pop	r29
+ 8b8:	cf 91       	pop	r28
+ 8ba:	1f 91       	pop	r17
+ 8bc:	0f 91       	pop	r16
+ 8be:	ff 90       	pop	r15
+ 8c0:	ef 90       	pop	r14
+ 8c2:	08 95       	ret
+
+000008c4 <_ZN14virtuabotixRTC10updateTimeEv>:
+                                                                    
+// updateTime Function Begin                                     
+//  A function that updates the time.  All other functions that access the time after the initial set    
+//  will call this function for the actual updating time.  This is the only function that updates the    
+//  time to the current data.                                                                            
+void virtuabotixRTC::updateTime() {                                                                      
+ 8c4:	ef 92       	push	r14
+ 8c6:	ff 92       	push	r15
+ 8c8:	0f 93       	push	r16
+ 8ca:	1f 93       	push	r17
+ 8cc:	7c 01       	movw	r14, r24
+                                                                                                        
+  DS1302_clock_burst_read( (uint8_t *) &rtc);               // Read all clock data at once (burst mode). 
+ 8ce:	0b e2       	ldi	r16, 0x2B	; 43
+ 8d0:	11 e0       	ldi	r17, 0x01	; 1
+ 8d2:	b8 01       	movw	r22, r16
+ 8d4:	0e 94 3d 04 	call	0x87a	; 0x87a <_ZN14virtuabotixRTC23DS1302_clock_burst_readEPh>
+                                                                                                        
+  char buffer[80];                                          // the code uses 70 characters.             
+  seconds     = ( rtc.Seconds10  * 10 ) + rtc. Seconds;                                                
+ 8d8:	f8 01       	movw	r30, r16
+ 8da:	41 91       	ld	r20, Z+
+ 8dc:	24 2f       	mov	r18, r20
+ 8de:	22 95       	swap	r18
+ 8e0:	2f 70       	andi	r18, 0x0F	; 15
+ 8e2:	82 2f       	mov	r24, r18
+ 8e4:	87 70       	andi	r24, 0x07	; 7
+ 8e6:	90 e0       	ldi	r25, 0x00	; 0
+ 8e8:	9c 01       	movw	r18, r24
+ 8ea:	22 0f       	add	r18, r18
+ 8ec:	33 1f       	adc	r19, r19
+ 8ee:	88 0f       	add	r24, r24
+ 8f0:	99 1f       	adc	r25, r25
+ 8f2:	88 0f       	add	r24, r24
+ 8f4:	99 1f       	adc	r25, r25
+ 8f6:	88 0f       	add	r24, r24
+ 8f8:	99 1f       	adc	r25, r25
+ 8fa:	28 0f       	add	r18, r24
+ 8fc:	39 1f       	adc	r19, r25
+ 8fe:	4f 70       	andi	r20, 0x0F	; 15
+ 900:	42 0f       	add	r20, r18
+ 902:	d7 01       	movw	r26, r14
+ 904:	13 96       	adiw	r26, 0x03	; 3
+ 906:	4c 93       	st	X, r20
+ 908:	13 97       	sbiw	r26, 0x03	; 3
+  minutes     = ( rtc. Minutes10 * 10 ) + rtc.Minutes;                                               
+ 90a:	40 81       	ld	r20, Z
+ 90c:	24 2f       	mov	r18, r20
+ 90e:	22 95       	swap	r18
+ 910:	2f 70       	andi	r18, 0x0F	; 15
+ 912:	82 2f       	mov	r24, r18
+ 914:	87 70       	andi	r24, 0x07	; 7
+ 916:	90 e0       	ldi	r25, 0x00	; 0
+ 918:	9c 01       	movw	r18, r24
+ 91a:	22 0f       	add	r18, r18
+ 91c:	33 1f       	adc	r19, r19
+ 91e:	88 0f       	add	r24, r24
+ 920:	99 1f       	adc	r25, r25
+ 922:	88 0f       	add	r24, r24
+ 924:	99 1f       	adc	r25, r25
+ 926:	88 0f       	add	r24, r24
+ 928:	99 1f       	adc	r25, r25
+ 92a:	28 0f       	add	r18, r24
+ 92c:	39 1f       	adc	r19, r25
+ 92e:	4f 70       	andi	r20, 0x0F	; 15
+ 930:	42 0f       	add	r20, r18
+ 932:	14 96       	adiw	r26, 0x04	; 4
+ 934:	4c 93       	st	X, r20
+ 936:	14 97       	sbiw	r26, 0x04	; 4
+  hours       = ( rtc.h24.Hour10 * 10 ) + rtc.h24.Hour;                                             
+ 938:	f8 01       	movw	r30, r16
+ 93a:	42 81       	ldd	r20, Z+2	; 0x02
+ 93c:	24 2f       	mov	r18, r20
+ 93e:	22 95       	swap	r18
+ 940:	2f 70       	andi	r18, 0x0F	; 15
+ 942:	82 2f       	mov	r24, r18
+ 944:	83 70       	andi	r24, 0x03	; 3
+ 946:	90 e0       	ldi	r25, 0x00	; 0
+ 948:	9c 01       	movw	r18, r24
+ 94a:	22 0f       	add	r18, r18
+ 94c:	33 1f       	adc	r19, r19
+ 94e:	88 0f       	add	r24, r24
+ 950:	99 1f       	adc	r25, r25
+ 952:	88 0f       	add	r24, r24
+ 954:	99 1f       	adc	r25, r25
+ 956:	88 0f       	add	r24, r24
+ 958:	99 1f       	adc	r25, r25
+ 95a:	28 0f       	add	r18, r24
+ 95c:	39 1f       	adc	r19, r25
+ 95e:	4f 70       	andi	r20, 0x0F	; 15
+ 960:	42 0f       	add	r20, r18
+ 962:	15 96       	adiw	r26, 0x05	; 5
+ 964:	4c 93       	st	X, r20
+ 966:	15 97       	sbiw	r26, 0x05	; 5
+  dayofweek   = ( rtc.Day );                                                                          
+ 968:	85 81       	ldd	r24, Z+5	; 0x05
+ 96a:	87 70       	andi	r24, 0x07	; 7
+ 96c:	16 96       	adiw	r26, 0x06	; 6
+ 96e:	8c 93       	st	X, r24
+ 970:	16 97       	sbiw	r26, 0x06	; 6
+  dayofmonth  = ( rtc.Date10  * 10 ) + rtc.Date;                                                         
+ 972:	43 81       	ldd	r20, Z+3	; 0x03
+ 974:	24 2f       	mov	r18, r20
+ 976:	22 95       	swap	r18
+ 978:	2f 70       	andi	r18, 0x0F	; 15
+ 97a:	82 2f       	mov	r24, r18
+ 97c:	83 70       	andi	r24, 0x03	; 3
+ 97e:	90 e0       	ldi	r25, 0x00	; 0
+ 980:	9c 01       	movw	r18, r24
+ 982:	22 0f       	add	r18, r18
+ 984:	33 1f       	adc	r19, r19
+ 986:	88 0f       	add	r24, r24
+ 988:	99 1f       	adc	r25, r25
+ 98a:	88 0f       	add	r24, r24
+ 98c:	99 1f       	adc	r25, r25
+ 98e:	88 0f       	add	r24, r24
+ 990:	99 1f       	adc	r25, r25
+ 992:	28 0f       	add	r18, r24
+ 994:	39 1f       	adc	r19, r25
+ 996:	4f 70       	andi	r20, 0x0F	; 15
+ 998:	42 0f       	add	r20, r18
+ 99a:	17 96       	adiw	r26, 0x07	; 7
+ 99c:	4c 93       	st	X, r20
+ 99e:	17 97       	sbiw	r26, 0x07	; 7
+  month       = ( rtc.Month10 * 10 ) + rtc.Month;                                                
+ 9a0:	44 81       	ldd	r20, Z+4	; 0x04
+ 9a2:	24 2f       	mov	r18, r20
+ 9a4:	22 95       	swap	r18
+ 9a6:	2f 70       	andi	r18, 0x0F	; 15
+ 9a8:	82 2f       	mov	r24, r18
+ 9aa:	81 70       	andi	r24, 0x01	; 1
+ 9ac:	90 e0       	ldi	r25, 0x00	; 0
+ 9ae:	9c 01       	movw	r18, r24
+ 9b0:	22 0f       	add	r18, r18
+ 9b2:	33 1f       	adc	r19, r19
+ 9b4:	88 0f       	add	r24, r24
+ 9b6:	99 1f       	adc	r25, r25
+ 9b8:	88 0f       	add	r24, r24
+ 9ba:	99 1f       	adc	r25, r25
+ 9bc:	88 0f       	add	r24, r24
+ 9be:	99 1f       	adc	r25, r25
+ 9c0:	28 0f       	add	r18, r24
+ 9c2:	39 1f       	adc	r19, r25
+ 9c4:	4f 70       	andi	r20, 0x0F	; 15
+ 9c6:	42 0f       	add	r20, r18
+ 9c8:	18 96       	adiw	r26, 0x08	; 8
+ 9ca:	4c 93       	st	X, r20
+ 9cc:	18 97       	sbiw	r26, 0x08	; 8
+  year        = ( rtc.Year10  * 10 ) + rtc.Year + 2000;                                           
+ 9ce:	26 81       	ldd	r18, Z+6	; 0x06
+ 9d0:	42 2f       	mov	r20, r18
+ 9d2:	4f 70       	andi	r20, 0x0F	; 15
+ 9d4:	50 e0       	ldi	r21, 0x00	; 0
+ 9d6:	40 53       	subi	r20, 0x30	; 48
+ 9d8:	58 4f       	sbci	r21, 0xF8	; 248
+ 9da:	82 2f       	mov	r24, r18
+ 9dc:	82 95       	swap	r24
+ 9de:	8f 70       	andi	r24, 0x0F	; 15
+ 9e0:	90 e0       	ldi	r25, 0x00	; 0
+ 9e2:	9c 01       	movw	r18, r24
+ 9e4:	22 0f       	add	r18, r18
+ 9e6:	33 1f       	adc	r19, r19
+ 9e8:	88 0f       	add	r24, r24
+ 9ea:	99 1f       	adc	r25, r25
+ 9ec:	88 0f       	add	r24, r24
+ 9ee:	99 1f       	adc	r25, r25
+ 9f0:	88 0f       	add	r24, r24
+ 9f2:	99 1f       	adc	r25, r25
+ 9f4:	28 0f       	add	r18, r24
+ 9f6:	39 1f       	adc	r19, r25
+ 9f8:	42 0f       	add	r20, r18
+ 9fa:	53 1f       	adc	r21, r19
+ 9fc:	1a 96       	adiw	r26, 0x0a	; 10
+ 9fe:	5c 93       	st	X, r21
+ a00:	4e 93       	st	-X, r20
+ a02:	19 97       	sbiw	r26, 0x09	; 9
+ a04:	1f 91       	pop	r17
+ a06:	0f 91       	pop	r16
+ a08:	ff 90       	pop	r15
+ a0a:	ef 90       	pop	r14
+ a0c:	08 95       	ret
+
+00000a0e <__udivmodsi4>:
+ a0e:	a1 e2       	ldi	r26, 0x21	; 33
+ a10:	1a 2e       	mov	r1, r26
+ a12:	aa 1b       	sub	r26, r26
+ a14:	bb 1b       	sub	r27, r27
+ a16:	fd 01       	movw	r30, r26
+ a18:	0d c0       	rjmp	.+26     	; 0xa34 <__udivmodsi4_ep>
+
+00000a1a <__udivmodsi4_loop>:
+ a1a:	aa 1f       	adc	r26, r26
+ a1c:	bb 1f       	adc	r27, r27
+ a1e:	ee 1f       	adc	r30, r30
+ a20:	ff 1f       	adc	r31, r31
+ a22:	a2 17       	cp	r26, r18
+ a24:	b3 07       	cpc	r27, r19
+ a26:	e4 07       	cpc	r30, r20
+ a28:	f5 07       	cpc	r31, r21
+ a2a:	20 f0       	brcs	.+8      	; 0xa34 <__udivmodsi4_ep>
+ a2c:	a2 1b       	sub	r26, r18
+ a2e:	b3 0b       	sbc	r27, r19
+ a30:	e4 0b       	sbc	r30, r20
+ a32:	f5 0b       	sbc	r31, r21
+
+00000a34 <__udivmodsi4_ep>:
+ a34:	66 1f       	adc	r22, r22
+ a36:	77 1f       	adc	r23, r23
+ a38:	88 1f       	adc	r24, r24
+ a3a:	99 1f       	adc	r25, r25
+ a3c:	1a 94       	dec	r1
+ a3e:	69 f7       	brne	.-38     	; 0xa1a <__udivmodsi4_loop>
+ a40:	60 95       	com	r22
+ a42:	70 95       	com	r23
+ a44:	80 95       	com	r24
+ a46:	90 95       	com	r25
+ a48:	9b 01       	movw	r18, r22
+ a4a:	ac 01       	movw	r20, r24
+ a4c:	bd 01       	movw	r22, r26
+ a4e:	cf 01       	movw	r24, r30
+ a50:	08 95       	ret
+
+00000a52 <__udivmodhi4>:
+ a52:	aa 1b       	sub	r26, r26
+ a54:	bb 1b       	sub	r27, r27
+ a56:	51 e1       	ldi	r21, 0x11	; 17
+ a58:	07 c0       	rjmp	.+14     	; 0xa68 <__udivmodhi4_ep>
+
+00000a5a <__udivmodhi4_loop>:
+ a5a:	aa 1f       	adc	r26, r26
+ a5c:	bb 1f       	adc	r27, r27
+ a5e:	a6 17       	cp	r26, r22
+ a60:	b7 07       	cpc	r27, r23
+ a62:	10 f0       	brcs	.+4      	; 0xa68 <__udivmodhi4_ep>
+ a64:	a6 1b       	sub	r26, r22
+ a66:	b7 0b       	sbc	r27, r23
+
+00000a68 <__udivmodhi4_ep>:
+ a68:	88 1f       	adc	r24, r24
+ a6a:	99 1f       	adc	r25, r25
+ a6c:	5a 95       	dec	r21
+ a6e:	a9 f7       	brne	.-22     	; 0xa5a <__udivmodhi4_loop>
+ a70:	80 95       	com	r24
+ a72:	90 95       	com	r25
+ a74:	bc 01       	movw	r22, r24
+ a76:	cd 01       	movw	r24, r26
+ a78:	08 95       	ret
+
+00000a7a <itoa>:
+ a7a:	fb 01       	movw	r30, r22
+ a7c:	9f 01       	movw	r18, r30
+ a7e:	e8 94       	clt
+ a80:	42 30       	cpi	r20, 0x02	; 2
+ a82:	c4 f0       	brlt	.+48     	; 0xab4 <itoa+0x3a>
+ a84:	45 32       	cpi	r20, 0x25	; 37
+ a86:	b4 f4       	brge	.+44     	; 0xab4 <itoa+0x3a>
+ a88:	4a 30       	cpi	r20, 0x0A	; 10
+ a8a:	29 f4       	brne	.+10     	; 0xa96 <itoa+0x1c>
+ a8c:	97 fb       	bst	r25, 7
+ a8e:	1e f4       	brtc	.+6      	; 0xa96 <itoa+0x1c>
+ a90:	90 95       	com	r25
+ a92:	81 95       	neg	r24
+ a94:	9f 4f       	sbci	r25, 0xFF	; 255
+ a96:	64 2f       	mov	r22, r20
+ a98:	77 27       	eor	r23, r23
+ a9a:	0e 94 29 05 	call	0xa52	; 0xa52 <__udivmodhi4>
+ a9e:	80 5d       	subi	r24, 0xD0	; 208
+ aa0:	8a 33       	cpi	r24, 0x3A	; 58
+ aa2:	0c f0       	brlt	.+2      	; 0xaa6 <itoa+0x2c>
+ aa4:	89 5d       	subi	r24, 0xD9	; 217
+ aa6:	81 93       	st	Z+, r24
+ aa8:	cb 01       	movw	r24, r22
+ aaa:	00 97       	sbiw	r24, 0x00	; 0
+ aac:	a1 f7       	brne	.-24     	; 0xa96 <itoa+0x1c>
+ aae:	16 f4       	brtc	.+4      	; 0xab4 <itoa+0x3a>
+ ab0:	5d e2       	ldi	r21, 0x2D	; 45
+ ab2:	51 93       	st	Z+, r21
+ ab4:	10 82       	st	Z, r1
+ ab6:	c9 01       	movw	r24, r18
+ ab8:	0c 94 5e 05 	jmp	0xabc	; 0xabc <strrev>
+
+00000abc <strrev>:
+ abc:	dc 01       	movw	r26, r24
+ abe:	fc 01       	movw	r30, r24
+ ac0:	67 2f       	mov	r22, r23
+ ac2:	71 91       	ld	r23, Z+
+ ac4:	77 23       	and	r23, r23
+ ac6:	e1 f7       	brne	.-8      	; 0xac0 <strrev+0x4>
+ ac8:	32 97       	sbiw	r30, 0x02	; 2
+ aca:	04 c0       	rjmp	.+8      	; 0xad4 <strrev+0x18>
+ acc:	7c 91       	ld	r23, X
+ ace:	6d 93       	st	X+, r22
+ ad0:	70 83       	st	Z, r23
+ ad2:	62 91       	ld	r22, -Z
+ ad4:	ae 17       	cp	r26, r30
+ ad6:	bf 07       	cpc	r27, r31
+ ad8:	c8 f3       	brcs	.-14     	; 0xacc <strrev+0x10>
+ ada:	08 95       	ret
+
+00000adc <_exit>:
+ adc:	f8 94       	cli
+
+00000ade <__stop_program>:
+ ade:	ff cf       	rjmp	.-2      	; 0xade <__stop_program>
